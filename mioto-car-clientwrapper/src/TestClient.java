@@ -27,10 +27,6 @@ public class TestClient {
     
     public static void main(String[] args)
     {
-        String env  = System.getProperty("appenv", "development");
-        String conf = System.getProperty("conf", "conf");
-        org.apache.log4j.PropertyConfigurator.configure(
-                conf + java.io.File.separator + env + ".log4j.ini");
         TSignUpRequest sr = new TSignUpRequest();
         sr.setPhone("0977821240");
         sr.setPwd("hahahahahaha");
