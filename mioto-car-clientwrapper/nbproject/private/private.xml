@@ -5,13 +5,8 @@
         <group>
             <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/wrapper/CarClientWrapper.java</file>
             <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/error/Err.java</file>
-            <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/genjava/MiotoCarService.java</file>
-            <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/genjava/TLoginResult.java</file>
-            <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/genjava/TSignUpRequest.java</file>
-            <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/genjava/TLoginInfo.java</file>
-            <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/genjava/OpHandle.java</file>
             <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/TestClient.java</file>
-            <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/genjava/TLogoutResult.java</file>
+            <file>file:/home/tuanlee/FinalProjectMioto/mioto-car-clientwrapper/mioto-car-clientwrapper/src/genjava/MiotoCarService.java</file>
         </group>
     </open-files>
 </project-private>
