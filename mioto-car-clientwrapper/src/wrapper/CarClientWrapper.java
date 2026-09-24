@@ -124,12 +124,12 @@ public class CarClientWrapper {
         }, new TUserResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
     
-    public TUserResult getUserBySessionId(final long sessionId)
+    public TUserResult getUserBySessionId(final long sessionId, final TLoginInfo info)
     {
         return execute(new Call<TUserResult>(){
             @Override
             public TUserResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getUserBySession(_handle, sessionId);
+                return client.getUserBySession(_handle, sessionId, info);
             }
             
         }, new TUserResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
