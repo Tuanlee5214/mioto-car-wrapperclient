@@ -1,9 +1,9 @@
 
 import error.Err;
-import org.apache.log4j.Logger;
 import thrift.TLoginInfo;
 import thrift.TLoginResult;
 import thrift.TSignUpRequest;
+import org.apache.log4j.Logger;
 import wrapper.CarClientWrapper;
 
 /*
@@ -35,7 +35,7 @@ public class TestClient {
         TLoginInfo info = new TLoginInfo();
         info.setUserAgent("ronaldo");
         info.setUserIP("127.0.0.1");
-        TLoginResult ret = cli.signup(sr, info);
+        TLoginResult ret = (TLoginResult) cli.signup(sr, info);
         if(Err.isSuccess(ret.getError()))
         {
             System.out.println("Sign up successfully with userId = " + String.valueOf(ret.getUser().getUserId()));
