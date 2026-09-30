@@ -513,12 +513,12 @@ public class CarClientWrapper {
         }, new TVoucherResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
     
-    public TListVoucherResult getVoucher(final String title, final int count, final int offset)
+    public TListVoucherResult getVoucher(final String title, final int count, final int offset, final String code)
     {
         return execute(new Call<TListVoucherResult>() {
             @Override
             public TListVoucherResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getVoucher(_handle, title, count, offset);
+                return client.getVoucher(_handle, title, count, offset, code);
             }
             
         }, new TListVoucherResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
