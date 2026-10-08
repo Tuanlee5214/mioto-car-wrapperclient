@@ -515,7 +515,7 @@ public class CarClientWrapper {
 
         }, new TVoucherResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
-
+    // ===================== Car =====================
     public TCarResult createCar(final TCar car, final List<TCarImage> images, final List<TCarFeature> features) {
         return execute(new Call<TCarResult>() {
             @Override
@@ -585,7 +585,7 @@ public class CarClientWrapper {
 
         }, new TListCarViewResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
-
+    // ===================== CarImages =====================
     public TListCarImageResult getCarImagesByCarId(final int carId) {
         return execute(new Call<TListCarImageResult>() {
             @Override
@@ -615,7 +615,7 @@ public class CarClientWrapper {
 
         }, new TCarImageResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
-
+    // ===================== CarFeatures =====================
     public TListCarFeatureViewResult getListCarFeatures(final int carId) {
         return execute(new Call<TListCarFeatureViewResult>() {
             @Override
@@ -645,7 +645,7 @@ public class CarClientWrapper {
 
         }, new TListCarFeatureViewResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
-
+    // ===================== CarUnavails =====================
     public TListCarUnavailsResult getListCarUnavails(final int carId) {
         return execute(new Call<TListCarUnavailsResult>() {
             @Override
@@ -675,7 +675,7 @@ public class CarClientWrapper {
 
         }, new TCarUnavailsResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
-
+    // ===================== Role =====================
     public TRoleResult createRole(final TRole role) {
         return execute(new Call<TRoleResult>() {
             @Override
@@ -711,7 +711,7 @@ public class CarClientWrapper {
             }
         }, new TListRoleResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
-
+    // ===================== UserRole =====================
     public TUserRoleResult getUserRole(final int userId) {
         return execute(new Call<TUserRoleResult>() {
             @Override
