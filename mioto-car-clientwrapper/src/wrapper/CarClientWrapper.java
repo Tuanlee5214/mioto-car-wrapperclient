@@ -47,6 +47,7 @@ import thrift.TCarDetailResult;
 import thrift.TCarFeature;
 import thrift.TCarFilterRequest;
 import thrift.TCarImage;
+import thrift.TCarImagePublicIdResult;
 import thrift.TCarImageResult;
 import thrift.TCarResult;
 import thrift.TCarUnavails;
@@ -56,6 +57,7 @@ import thrift.TListCarImageResult;
 import thrift.TListCarUnavailsResult;
 import thrift.TListCarViewResult;
 import thrift.TListRoleResult;
+import thrift.TListUserResult;
 import thrift.TRole;
 import thrift.TRoleResult;
 import thrift.TUserRoleResult;
@@ -157,6 +159,17 @@ public class CarClientWrapper {
             }
 
         }, new TUserResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
+    }
+    
+    public TListUserResult getAllUser(final int status, final int count, final int offset)
+    {
+        return execute(new Call<TListUserResult>(){
+            @Override
+            public TListUserResult exec(MiotoCarService.Client client) throws Exception {
+                return (TListUserResult) client.getAllUser(_handle, status, count, offset);
+            }
+
+        }, new TListUserResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
     public TUserResult getUserBySessionId(final long sessionId, final TLoginInfo info) {
@@ -596,6 +609,26 @@ public class CarClientWrapper {
         }, new TListCarImageResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
+    public long countImageOfCar(final int carId) {
+        return execute(new Call<Long>() {
+            @Override
+            public Long exec(MiotoCarService.Client client) throws Exception {
+                return client.countImagesOfCar(carId);
+            }
+        }, -1L);
+    }
+    
+    public TCarImagePublicIdResult multigetPublicId(final int carId, final List<Long> ids)
+    {
+        return execute(new Call<TCarImagePublicIdResult>() {
+            @Override
+            public TCarImagePublicIdResult exec(MiotoCarService.Client client) throws Exception {
+                return client.multigetPublicId(carId, ids);
+            }
+
+        }, new TCarImagePublicIdResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
+    }
+    
     public TListCarImageResult createCarImages(final List<TCarImage> images, final int userId) {
         return execute(new Call<TListCarImageResult>() {
             @Override
