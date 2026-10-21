@@ -28,7 +28,7 @@ public class MiotoCarService {
 
     public thrift.TUserResult getUser(thrift.OpHandle handle, int userId) throws org.apache.thrift.TException;
 
-    public thrift.TListUserResult getAllUser(thrift.OpHandle handle, int status, int count, int offset) throws org.apache.thrift.TException;
+    public thrift.TListUserResult getAllUser(thrift.OpHandle handle, int status, int limit, long cursor) throws org.apache.thrift.TException;
 
     public thrift.TUpdateUserResult updateUser(thrift.OpHandle handle, thrift.TUser user) throws org.apache.thrift.TException;
 
@@ -36,7 +36,7 @@ public class MiotoCarService {
 
     public thrift.TFeePolicyResult updateFeePolicy(thrift.OpHandle handle, thrift.TFeePolicy feePolicy) throws org.apache.thrift.TException;
 
-    public thrift.TListFeePolicyResult getFeePolicy(thrift.OpHandle handle, java.lang.String name, int count, int offset) throws org.apache.thrift.TException;
+    public thrift.TListFeePolicyResult getFeePolicy(thrift.OpHandle handle, java.lang.String name, int limit, long cursor) throws org.apache.thrift.TException;
 
     public thrift.TFeePolicyResult getFeePolicyById(thrift.OpHandle handle, int feePolicyId) throws org.apache.thrift.TException;
 
@@ -46,7 +46,7 @@ public class MiotoCarService {
 
     public thrift.TProvinceResult updateProvince(thrift.OpHandle handle, thrift.TProvince province) throws org.apache.thrift.TException;
 
-    public thrift.TListProvinceResult getProvince(thrift.OpHandle handle, java.lang.String provinceName, int count, int offset) throws org.apache.thrift.TException;
+    public thrift.TListProvinceResult getProvince(thrift.OpHandle handle, java.lang.String provinceName, int limit, long cursor) throws org.apache.thrift.TException;
 
     public thrift.TProvinceResult getProvinceById(thrift.OpHandle handle, int provinceId) throws org.apache.thrift.TException;
 
@@ -56,7 +56,7 @@ public class MiotoCarService {
 
     public thrift.TDistrictResult updateDistrict(thrift.OpHandle handle, thrift.TDistrict district) throws org.apache.thrift.TException;
 
-    public thrift.TListDistrictResult getDistrict(thrift.OpHandle handle, int provinceId, int count, int offset) throws org.apache.thrift.TException;
+    public thrift.TListDistrictResult getDistrict(thrift.OpHandle handle, int provinceId, int limit, long cursor) throws org.apache.thrift.TException;
 
     public thrift.TDistrictResult getDistrictById(thrift.OpHandle handle, int districtId) throws org.apache.thrift.TException;
 
@@ -76,7 +76,7 @@ public class MiotoCarService {
 
     public thrift.TFeatureResult updateFeature(thrift.OpHandle handle, thrift.TFeature feature) throws org.apache.thrift.TException;
 
-    public thrift.TListFeatureResult getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int count, int offset) throws org.apache.thrift.TException;
+    public thrift.TListFeatureResult getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int limit, long cursor) throws org.apache.thrift.TException;
 
     public thrift.TFeatureResult getFeatureById(thrift.OpHandle handle, int featureId) throws org.apache.thrift.TException;
 
@@ -86,7 +86,7 @@ public class MiotoCarService {
 
     public thrift.TFeedBackResult updateFeedBack(thrift.OpHandle handle, thrift.TFeedBack feedback) throws org.apache.thrift.TException;
 
-    public thrift.TListFeedBackResult getFeedBack(thrift.OpHandle handle, int receiverId, int count, int offset) throws org.apache.thrift.TException;
+    public thrift.TListFeedBackResult getFeedBack(thrift.OpHandle handle, int receiverId, int limit, long cursor) throws org.apache.thrift.TException;
 
     public thrift.TFeedBackResult deleteFeedBack(thrift.OpHandle handle, int feedBackId) throws org.apache.thrift.TException;
 
@@ -94,7 +94,7 @@ public class MiotoCarService {
 
     public thrift.TVoucherResult updateVoucher(thrift.OpHandle handle, thrift.TVoucher voucher) throws org.apache.thrift.TException;
 
-    public thrift.TListVoucherResult getVoucher(thrift.OpHandle handle, java.lang.String title, int count, int offset, java.lang.String code) throws org.apache.thrift.TException;
+    public thrift.TListVoucherResult getVoucher(thrift.OpHandle handle, java.lang.String title, int limit, long cursor, java.lang.String code) throws org.apache.thrift.TException;
 
     public thrift.TVoucherResult getVoucherById(thrift.OpHandle handle, int voucherId) throws org.apache.thrift.TException;
 
@@ -110,7 +110,7 @@ public class MiotoCarService {
 
     public thrift.TCarDetailResult getCarById(thrift.OpHandle handle, int carId) throws org.apache.thrift.TException;
 
-    public thrift.TListCarViewResult getCarViewByUserId(thrift.OpHandle handle, int userId, int count, int offset) throws org.apache.thrift.TException;
+    public thrift.TListCarViewResult getCarViewByUserId(thrift.OpHandle handle, int userId, int limit, long cursor) throws org.apache.thrift.TException;
 
     public thrift.TListCarViewResult searchCar(thrift.OpHandle handle, thrift.TCarFilterRequest filter, long startTime, long endTime, int count, int offset) throws org.apache.thrift.TException;
 
@@ -140,7 +140,7 @@ public class MiotoCarService {
 
     public thrift.TRoleResult deleteRole(thrift.OpHandle handle, int roleId) throws org.apache.thrift.TException;
 
-    public thrift.TListRoleResult getRole(thrift.OpHandle handle, java.lang.String name, int count, int offset) throws org.apache.thrift.TException;
+    public thrift.TListRoleResult getRole(thrift.OpHandle handle, java.lang.String name, int limit, long cursor) throws org.apache.thrift.TException;
 
     public thrift.TUserRoleResult getUserRole(thrift.OpHandle handle, int userId) throws org.apache.thrift.TException;
 
@@ -166,7 +166,7 @@ public class MiotoCarService {
 
     public void getUser(thrift.OpHandle handle, int userId, org.apache.thrift.async.AsyncMethodCallback<thrift.TUserResult> resultHandler) throws org.apache.thrift.TException;
 
-    public void getAllUser(thrift.OpHandle handle, int status, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListUserResult> resultHandler) throws org.apache.thrift.TException;
+    public void getAllUser(thrift.OpHandle handle, int status, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListUserResult> resultHandler) throws org.apache.thrift.TException;
 
     public void updateUser(thrift.OpHandle handle, thrift.TUser user, org.apache.thrift.async.AsyncMethodCallback<thrift.TUpdateUserResult> resultHandler) throws org.apache.thrift.TException;
 
@@ -174,7 +174,7 @@ public class MiotoCarService {
 
     public void updateFeePolicy(thrift.OpHandle handle, thrift.TFeePolicy feePolicy, org.apache.thrift.async.AsyncMethodCallback<thrift.TFeePolicyResult> resultHandler) throws org.apache.thrift.TException;
 
-    public void getFeePolicy(thrift.OpHandle handle, java.lang.String name, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeePolicyResult> resultHandler) throws org.apache.thrift.TException;
+    public void getFeePolicy(thrift.OpHandle handle, java.lang.String name, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeePolicyResult> resultHandler) throws org.apache.thrift.TException;
 
     public void getFeePolicyById(thrift.OpHandle handle, int feePolicyId, org.apache.thrift.async.AsyncMethodCallback<thrift.TFeePolicyResult> resultHandler) throws org.apache.thrift.TException;
 
@@ -184,7 +184,7 @@ public class MiotoCarService {
 
     public void updateProvince(thrift.OpHandle handle, thrift.TProvince province, org.apache.thrift.async.AsyncMethodCallback<thrift.TProvinceResult> resultHandler) throws org.apache.thrift.TException;
 
-    public void getProvince(thrift.OpHandle handle, java.lang.String provinceName, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListProvinceResult> resultHandler) throws org.apache.thrift.TException;
+    public void getProvince(thrift.OpHandle handle, java.lang.String provinceName, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListProvinceResult> resultHandler) throws org.apache.thrift.TException;
 
     public void getProvinceById(thrift.OpHandle handle, int provinceId, org.apache.thrift.async.AsyncMethodCallback<thrift.TProvinceResult> resultHandler) throws org.apache.thrift.TException;
 
@@ -194,7 +194,7 @@ public class MiotoCarService {
 
     public void updateDistrict(thrift.OpHandle handle, thrift.TDistrict district, org.apache.thrift.async.AsyncMethodCallback<thrift.TDistrictResult> resultHandler) throws org.apache.thrift.TException;
 
-    public void getDistrict(thrift.OpHandle handle, int provinceId, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListDistrictResult> resultHandler) throws org.apache.thrift.TException;
+    public void getDistrict(thrift.OpHandle handle, int provinceId, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListDistrictResult> resultHandler) throws org.apache.thrift.TException;
 
     public void getDistrictById(thrift.OpHandle handle, int districtId, org.apache.thrift.async.AsyncMethodCallback<thrift.TDistrictResult> resultHandler) throws org.apache.thrift.TException;
 
@@ -214,7 +214,7 @@ public class MiotoCarService {
 
     public void updateFeature(thrift.OpHandle handle, thrift.TFeature feature, org.apache.thrift.async.AsyncMethodCallback<thrift.TFeatureResult> resultHandler) throws org.apache.thrift.TException;
 
-    public void getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeatureResult> resultHandler) throws org.apache.thrift.TException;
+    public void getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeatureResult> resultHandler) throws org.apache.thrift.TException;
 
     public void getFeatureById(thrift.OpHandle handle, int featureId, org.apache.thrift.async.AsyncMethodCallback<thrift.TFeatureResult> resultHandler) throws org.apache.thrift.TException;
 
@@ -224,7 +224,7 @@ public class MiotoCarService {
 
     public void updateFeedBack(thrift.OpHandle handle, thrift.TFeedBack feedback, org.apache.thrift.async.AsyncMethodCallback<thrift.TFeedBackResult> resultHandler) throws org.apache.thrift.TException;
 
-    public void getFeedBack(thrift.OpHandle handle, int receiverId, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeedBackResult> resultHandler) throws org.apache.thrift.TException;
+    public void getFeedBack(thrift.OpHandle handle, int receiverId, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeedBackResult> resultHandler) throws org.apache.thrift.TException;
 
     public void deleteFeedBack(thrift.OpHandle handle, int feedBackId, org.apache.thrift.async.AsyncMethodCallback<thrift.TFeedBackResult> resultHandler) throws org.apache.thrift.TException;
 
@@ -232,7 +232,7 @@ public class MiotoCarService {
 
     public void updateVoucher(thrift.OpHandle handle, thrift.TVoucher voucher, org.apache.thrift.async.AsyncMethodCallback<thrift.TVoucherResult> resultHandler) throws org.apache.thrift.TException;
 
-    public void getVoucher(thrift.OpHandle handle, java.lang.String title, int count, int offset, java.lang.String code, org.apache.thrift.async.AsyncMethodCallback<thrift.TListVoucherResult> resultHandler) throws org.apache.thrift.TException;
+    public void getVoucher(thrift.OpHandle handle, java.lang.String title, int limit, long cursor, java.lang.String code, org.apache.thrift.async.AsyncMethodCallback<thrift.TListVoucherResult> resultHandler) throws org.apache.thrift.TException;
 
     public void getVoucherById(thrift.OpHandle handle, int voucherId, org.apache.thrift.async.AsyncMethodCallback<thrift.TVoucherResult> resultHandler) throws org.apache.thrift.TException;
 
@@ -248,7 +248,7 @@ public class MiotoCarService {
 
     public void getCarById(thrift.OpHandle handle, int carId, org.apache.thrift.async.AsyncMethodCallback<thrift.TCarDetailResult> resultHandler) throws org.apache.thrift.TException;
 
-    public void getCarViewByUserId(thrift.OpHandle handle, int userId, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListCarViewResult> resultHandler) throws org.apache.thrift.TException;
+    public void getCarViewByUserId(thrift.OpHandle handle, int userId, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListCarViewResult> resultHandler) throws org.apache.thrift.TException;
 
     public void searchCar(thrift.OpHandle handle, thrift.TCarFilterRequest filter, long startTime, long endTime, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListCarViewResult> resultHandler) throws org.apache.thrift.TException;
 
@@ -278,7 +278,7 @@ public class MiotoCarService {
 
     public void deleteRole(thrift.OpHandle handle, int roleId, org.apache.thrift.async.AsyncMethodCallback<thrift.TRoleResult> resultHandler) throws org.apache.thrift.TException;
 
-    public void getRole(thrift.OpHandle handle, java.lang.String name, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListRoleResult> resultHandler) throws org.apache.thrift.TException;
+    public void getRole(thrift.OpHandle handle, java.lang.String name, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListRoleResult> resultHandler) throws org.apache.thrift.TException;
 
     public void getUserRole(thrift.OpHandle handle, int userId, org.apache.thrift.async.AsyncMethodCallback<thrift.TUserRoleResult> resultHandler) throws org.apache.thrift.TException;
 
@@ -434,19 +434,19 @@ public class MiotoCarService {
       throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "getUser failed: unknown result");
     }
 
-    public thrift.TListUserResult getAllUser(thrift.OpHandle handle, int status, int count, int offset) throws org.apache.thrift.TException
+    public thrift.TListUserResult getAllUser(thrift.OpHandle handle, int status, int limit, long cursor) throws org.apache.thrift.TException
     {
-      send_getAllUser(handle, status, count, offset);
+      send_getAllUser(handle, status, limit, cursor);
       return recv_getAllUser();
     }
 
-    public void send_getAllUser(thrift.OpHandle handle, int status, int count, int offset) throws org.apache.thrift.TException
+    public void send_getAllUser(thrift.OpHandle handle, int status, int limit, long cursor) throws org.apache.thrift.TException
     {
       getAllUser_args args = new getAllUser_args();
       args.setHandle(handle);
       args.setStatus(status);
-      args.setCount(count);
-      args.setOffset(offset);
+      args.setLimit(limit);
+      args.setCursor(cursor);
       sendBase("getAllUser", args);
     }
 
@@ -532,19 +532,19 @@ public class MiotoCarService {
       throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "updateFeePolicy failed: unknown result");
     }
 
-    public thrift.TListFeePolicyResult getFeePolicy(thrift.OpHandle handle, java.lang.String name, int count, int offset) throws org.apache.thrift.TException
+    public thrift.TListFeePolicyResult getFeePolicy(thrift.OpHandle handle, java.lang.String name, int limit, long cursor) throws org.apache.thrift.TException
     {
-      send_getFeePolicy(handle, name, count, offset);
+      send_getFeePolicy(handle, name, limit, cursor);
       return recv_getFeePolicy();
     }
 
-    public void send_getFeePolicy(thrift.OpHandle handle, java.lang.String name, int count, int offset) throws org.apache.thrift.TException
+    public void send_getFeePolicy(thrift.OpHandle handle, java.lang.String name, int limit, long cursor) throws org.apache.thrift.TException
     {
       getFeePolicy_args args = new getFeePolicy_args();
       args.setHandle(handle);
       args.setName(name);
-      args.setCount(count);
-      args.setOffset(offset);
+      args.setLimit(limit);
+      args.setCursor(cursor);
       sendBase("getFeePolicy", args);
     }
 
@@ -654,19 +654,19 @@ public class MiotoCarService {
       throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "updateProvince failed: unknown result");
     }
 
-    public thrift.TListProvinceResult getProvince(thrift.OpHandle handle, java.lang.String provinceName, int count, int offset) throws org.apache.thrift.TException
+    public thrift.TListProvinceResult getProvince(thrift.OpHandle handle, java.lang.String provinceName, int limit, long cursor) throws org.apache.thrift.TException
     {
-      send_getProvince(handle, provinceName, count, offset);
+      send_getProvince(handle, provinceName, limit, cursor);
       return recv_getProvince();
     }
 
-    public void send_getProvince(thrift.OpHandle handle, java.lang.String provinceName, int count, int offset) throws org.apache.thrift.TException
+    public void send_getProvince(thrift.OpHandle handle, java.lang.String provinceName, int limit, long cursor) throws org.apache.thrift.TException
     {
       getProvince_args args = new getProvince_args();
       args.setHandle(handle);
       args.setProvinceName(provinceName);
-      args.setCount(count);
-      args.setOffset(offset);
+      args.setLimit(limit);
+      args.setCursor(cursor);
       sendBase("getProvince", args);
     }
 
@@ -776,19 +776,19 @@ public class MiotoCarService {
       throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "updateDistrict failed: unknown result");
     }
 
-    public thrift.TListDistrictResult getDistrict(thrift.OpHandle handle, int provinceId, int count, int offset) throws org.apache.thrift.TException
+    public thrift.TListDistrictResult getDistrict(thrift.OpHandle handle, int provinceId, int limit, long cursor) throws org.apache.thrift.TException
     {
-      send_getDistrict(handle, provinceId, count, offset);
+      send_getDistrict(handle, provinceId, limit, cursor);
       return recv_getDistrict();
     }
 
-    public void send_getDistrict(thrift.OpHandle handle, int provinceId, int count, int offset) throws org.apache.thrift.TException
+    public void send_getDistrict(thrift.OpHandle handle, int provinceId, int limit, long cursor) throws org.apache.thrift.TException
     {
       getDistrict_args args = new getDistrict_args();
       args.setHandle(handle);
       args.setProvinceId(provinceId);
-      args.setCount(count);
-      args.setOffset(offset);
+      args.setLimit(limit);
+      args.setCursor(cursor);
       sendBase("getDistrict", args);
     }
 
@@ -1020,19 +1020,19 @@ public class MiotoCarService {
       throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "updateFeature failed: unknown result");
     }
 
-    public thrift.TListFeatureResult getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int count, int offset) throws org.apache.thrift.TException
+    public thrift.TListFeatureResult getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int limit, long cursor) throws org.apache.thrift.TException
     {
-      send_getFeature(handle, nameFeature, count, offset);
+      send_getFeature(handle, nameFeature, limit, cursor);
       return recv_getFeature();
     }
 
-    public void send_getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int count, int offset) throws org.apache.thrift.TException
+    public void send_getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int limit, long cursor) throws org.apache.thrift.TException
     {
       getFeature_args args = new getFeature_args();
       args.setHandle(handle);
       args.setNameFeature(nameFeature);
-      args.setCount(count);
-      args.setOffset(offset);
+      args.setLimit(limit);
+      args.setCursor(cursor);
       sendBase("getFeature", args);
     }
 
@@ -1142,19 +1142,19 @@ public class MiotoCarService {
       throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "updateFeedBack failed: unknown result");
     }
 
-    public thrift.TListFeedBackResult getFeedBack(thrift.OpHandle handle, int receiverId, int count, int offset) throws org.apache.thrift.TException
+    public thrift.TListFeedBackResult getFeedBack(thrift.OpHandle handle, int receiverId, int limit, long cursor) throws org.apache.thrift.TException
     {
-      send_getFeedBack(handle, receiverId, count, offset);
+      send_getFeedBack(handle, receiverId, limit, cursor);
       return recv_getFeedBack();
     }
 
-    public void send_getFeedBack(thrift.OpHandle handle, int receiverId, int count, int offset) throws org.apache.thrift.TException
+    public void send_getFeedBack(thrift.OpHandle handle, int receiverId, int limit, long cursor) throws org.apache.thrift.TException
     {
       getFeedBack_args args = new getFeedBack_args();
       args.setHandle(handle);
       args.setReceiverId(receiverId);
-      args.setCount(count);
-      args.setOffset(offset);
+      args.setLimit(limit);
+      args.setCursor(cursor);
       sendBase("getFeedBack", args);
     }
 
@@ -1240,19 +1240,19 @@ public class MiotoCarService {
       throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "updateVoucher failed: unknown result");
     }
 
-    public thrift.TListVoucherResult getVoucher(thrift.OpHandle handle, java.lang.String title, int count, int offset, java.lang.String code) throws org.apache.thrift.TException
+    public thrift.TListVoucherResult getVoucher(thrift.OpHandle handle, java.lang.String title, int limit, long cursor, java.lang.String code) throws org.apache.thrift.TException
     {
-      send_getVoucher(handle, title, count, offset, code);
+      send_getVoucher(handle, title, limit, cursor, code);
       return recv_getVoucher();
     }
 
-    public void send_getVoucher(thrift.OpHandle handle, java.lang.String title, int count, int offset, java.lang.String code) throws org.apache.thrift.TException
+    public void send_getVoucher(thrift.OpHandle handle, java.lang.String title, int limit, long cursor, java.lang.String code) throws org.apache.thrift.TException
     {
       getVoucher_args args = new getVoucher_args();
       args.setHandle(handle);
       args.setTitle(title);
-      args.setCount(count);
-      args.setOffset(offset);
+      args.setLimit(limit);
+      args.setCursor(cursor);
       args.setCode(code);
       sendBase("getVoucher", args);
     }
@@ -1438,19 +1438,19 @@ public class MiotoCarService {
       throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "getCarById failed: unknown result");
     }
 
-    public thrift.TListCarViewResult getCarViewByUserId(thrift.OpHandle handle, int userId, int count, int offset) throws org.apache.thrift.TException
+    public thrift.TListCarViewResult getCarViewByUserId(thrift.OpHandle handle, int userId, int limit, long cursor) throws org.apache.thrift.TException
     {
-      send_getCarViewByUserId(handle, userId, count, offset);
+      send_getCarViewByUserId(handle, userId, limit, cursor);
       return recv_getCarViewByUserId();
     }
 
-    public void send_getCarViewByUserId(thrift.OpHandle handle, int userId, int count, int offset) throws org.apache.thrift.TException
+    public void send_getCarViewByUserId(thrift.OpHandle handle, int userId, int limit, long cursor) throws org.apache.thrift.TException
     {
       getCarViewByUserId_args args = new getCarViewByUserId_args();
       args.setHandle(handle);
       args.setUserId(userId);
-      args.setCount(count);
-      args.setOffset(offset);
+      args.setLimit(limit);
+      args.setCursor(cursor);
       sendBase("getCarViewByUserId", args);
     }
 
@@ -1816,19 +1816,19 @@ public class MiotoCarService {
       throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "deleteRole failed: unknown result");
     }
 
-    public thrift.TListRoleResult getRole(thrift.OpHandle handle, java.lang.String name, int count, int offset) throws org.apache.thrift.TException
+    public thrift.TListRoleResult getRole(thrift.OpHandle handle, java.lang.String name, int limit, long cursor) throws org.apache.thrift.TException
     {
-      send_getRole(handle, name, count, offset);
+      send_getRole(handle, name, limit, cursor);
       return recv_getRole();
     }
 
-    public void send_getRole(thrift.OpHandle handle, java.lang.String name, int count, int offset) throws org.apache.thrift.TException
+    public void send_getRole(thrift.OpHandle handle, java.lang.String name, int limit, long cursor) throws org.apache.thrift.TException
     {
       getRole_args args = new getRole_args();
       args.setHandle(handle);
       args.setName(name);
-      args.setCount(count);
-      args.setOffset(offset);
+      args.setLimit(limit);
+      args.setCursor(cursor);
       sendBase("getRole", args);
     }
 
@@ -2162,9 +2162,9 @@ public class MiotoCarService {
       }
     }
 
-    public void getAllUser(thrift.OpHandle handle, int status, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListUserResult> resultHandler) throws org.apache.thrift.TException {
+    public void getAllUser(thrift.OpHandle handle, int status, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListUserResult> resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      getAllUser_call method_call = new getAllUser_call(handle, status, count, offset, resultHandler, this, ___protocolFactory, ___transport);
+      getAllUser_call method_call = new getAllUser_call(handle, status, limit, cursor, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
@@ -2172,14 +2172,14 @@ public class MiotoCarService {
     public static class getAllUser_call extends org.apache.thrift.async.TAsyncMethodCall<thrift.TListUserResult> {
       private thrift.OpHandle handle;
       private int status;
-      private int count;
-      private int offset;
-      public getAllUser_call(thrift.OpHandle handle, int status, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListUserResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      private int limit;
+      private long cursor;
+      public getAllUser_call(thrift.OpHandle handle, int status, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListUserResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
         this.handle = handle;
         this.status = status;
-        this.count = count;
-        this.offset = offset;
+        this.limit = limit;
+        this.cursor = cursor;
       }
 
       public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
@@ -2187,8 +2187,8 @@ public class MiotoCarService {
         getAllUser_args args = new getAllUser_args();
         args.setHandle(handle);
         args.setStatus(status);
-        args.setCount(count);
-        args.setOffset(offset);
+        args.setLimit(limit);
+        args.setCursor(cursor);
         args.write(prot);
         prot.writeMessageEnd();
       }
@@ -2308,9 +2308,9 @@ public class MiotoCarService {
       }
     }
 
-    public void getFeePolicy(thrift.OpHandle handle, java.lang.String name, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeePolicyResult> resultHandler) throws org.apache.thrift.TException {
+    public void getFeePolicy(thrift.OpHandle handle, java.lang.String name, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeePolicyResult> resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      getFeePolicy_call method_call = new getFeePolicy_call(handle, name, count, offset, resultHandler, this, ___protocolFactory, ___transport);
+      getFeePolicy_call method_call = new getFeePolicy_call(handle, name, limit, cursor, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
@@ -2318,14 +2318,14 @@ public class MiotoCarService {
     public static class getFeePolicy_call extends org.apache.thrift.async.TAsyncMethodCall<thrift.TListFeePolicyResult> {
       private thrift.OpHandle handle;
       private java.lang.String name;
-      private int count;
-      private int offset;
-      public getFeePolicy_call(thrift.OpHandle handle, java.lang.String name, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeePolicyResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      private int limit;
+      private long cursor;
+      public getFeePolicy_call(thrift.OpHandle handle, java.lang.String name, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeePolicyResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
         this.handle = handle;
         this.name = name;
-        this.count = count;
-        this.offset = offset;
+        this.limit = limit;
+        this.cursor = cursor;
       }
 
       public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
@@ -2333,8 +2333,8 @@ public class MiotoCarService {
         getFeePolicy_args args = new getFeePolicy_args();
         args.setHandle(handle);
         args.setName(name);
-        args.setCount(count);
-        args.setOffset(offset);
+        args.setLimit(limit);
+        args.setCursor(cursor);
         args.write(prot);
         prot.writeMessageEnd();
       }
@@ -2489,9 +2489,9 @@ public class MiotoCarService {
       }
     }
 
-    public void getProvince(thrift.OpHandle handle, java.lang.String provinceName, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListProvinceResult> resultHandler) throws org.apache.thrift.TException {
+    public void getProvince(thrift.OpHandle handle, java.lang.String provinceName, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListProvinceResult> resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      getProvince_call method_call = new getProvince_call(handle, provinceName, count, offset, resultHandler, this, ___protocolFactory, ___transport);
+      getProvince_call method_call = new getProvince_call(handle, provinceName, limit, cursor, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
@@ -2499,14 +2499,14 @@ public class MiotoCarService {
     public static class getProvince_call extends org.apache.thrift.async.TAsyncMethodCall<thrift.TListProvinceResult> {
       private thrift.OpHandle handle;
       private java.lang.String provinceName;
-      private int count;
-      private int offset;
-      public getProvince_call(thrift.OpHandle handle, java.lang.String provinceName, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListProvinceResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      private int limit;
+      private long cursor;
+      public getProvince_call(thrift.OpHandle handle, java.lang.String provinceName, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListProvinceResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
         this.handle = handle;
         this.provinceName = provinceName;
-        this.count = count;
-        this.offset = offset;
+        this.limit = limit;
+        this.cursor = cursor;
       }
 
       public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
@@ -2514,8 +2514,8 @@ public class MiotoCarService {
         getProvince_args args = new getProvince_args();
         args.setHandle(handle);
         args.setProvinceName(provinceName);
-        args.setCount(count);
-        args.setOffset(offset);
+        args.setLimit(limit);
+        args.setCursor(cursor);
         args.write(prot);
         prot.writeMessageEnd();
       }
@@ -2670,9 +2670,9 @@ public class MiotoCarService {
       }
     }
 
-    public void getDistrict(thrift.OpHandle handle, int provinceId, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListDistrictResult> resultHandler) throws org.apache.thrift.TException {
+    public void getDistrict(thrift.OpHandle handle, int provinceId, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListDistrictResult> resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      getDistrict_call method_call = new getDistrict_call(handle, provinceId, count, offset, resultHandler, this, ___protocolFactory, ___transport);
+      getDistrict_call method_call = new getDistrict_call(handle, provinceId, limit, cursor, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
@@ -2680,14 +2680,14 @@ public class MiotoCarService {
     public static class getDistrict_call extends org.apache.thrift.async.TAsyncMethodCall<thrift.TListDistrictResult> {
       private thrift.OpHandle handle;
       private int provinceId;
-      private int count;
-      private int offset;
-      public getDistrict_call(thrift.OpHandle handle, int provinceId, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListDistrictResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      private int limit;
+      private long cursor;
+      public getDistrict_call(thrift.OpHandle handle, int provinceId, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListDistrictResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
         this.handle = handle;
         this.provinceId = provinceId;
-        this.count = count;
-        this.offset = offset;
+        this.limit = limit;
+        this.cursor = cursor;
       }
 
       public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
@@ -2695,8 +2695,8 @@ public class MiotoCarService {
         getDistrict_args args = new getDistrict_args();
         args.setHandle(handle);
         args.setProvinceId(provinceId);
-        args.setCount(count);
-        args.setOffset(offset);
+        args.setLimit(limit);
+        args.setCursor(cursor);
         args.write(prot);
         prot.writeMessageEnd();
       }
@@ -3032,9 +3032,9 @@ public class MiotoCarService {
       }
     }
 
-    public void getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeatureResult> resultHandler) throws org.apache.thrift.TException {
+    public void getFeature(thrift.OpHandle handle, java.lang.String nameFeature, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeatureResult> resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      getFeature_call method_call = new getFeature_call(handle, nameFeature, count, offset, resultHandler, this, ___protocolFactory, ___transport);
+      getFeature_call method_call = new getFeature_call(handle, nameFeature, limit, cursor, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
@@ -3042,14 +3042,14 @@ public class MiotoCarService {
     public static class getFeature_call extends org.apache.thrift.async.TAsyncMethodCall<thrift.TListFeatureResult> {
       private thrift.OpHandle handle;
       private java.lang.String nameFeature;
-      private int count;
-      private int offset;
-      public getFeature_call(thrift.OpHandle handle, java.lang.String nameFeature, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeatureResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      private int limit;
+      private long cursor;
+      public getFeature_call(thrift.OpHandle handle, java.lang.String nameFeature, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeatureResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
         this.handle = handle;
         this.nameFeature = nameFeature;
-        this.count = count;
-        this.offset = offset;
+        this.limit = limit;
+        this.cursor = cursor;
       }
 
       public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
@@ -3057,8 +3057,8 @@ public class MiotoCarService {
         getFeature_args args = new getFeature_args();
         args.setHandle(handle);
         args.setNameFeature(nameFeature);
-        args.setCount(count);
-        args.setOffset(offset);
+        args.setLimit(limit);
+        args.setCursor(cursor);
         args.write(prot);
         prot.writeMessageEnd();
       }
@@ -3213,9 +3213,9 @@ public class MiotoCarService {
       }
     }
 
-    public void getFeedBack(thrift.OpHandle handle, int receiverId, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeedBackResult> resultHandler) throws org.apache.thrift.TException {
+    public void getFeedBack(thrift.OpHandle handle, int receiverId, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeedBackResult> resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      getFeedBack_call method_call = new getFeedBack_call(handle, receiverId, count, offset, resultHandler, this, ___protocolFactory, ___transport);
+      getFeedBack_call method_call = new getFeedBack_call(handle, receiverId, limit, cursor, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
@@ -3223,14 +3223,14 @@ public class MiotoCarService {
     public static class getFeedBack_call extends org.apache.thrift.async.TAsyncMethodCall<thrift.TListFeedBackResult> {
       private thrift.OpHandle handle;
       private int receiverId;
-      private int count;
-      private int offset;
-      public getFeedBack_call(thrift.OpHandle handle, int receiverId, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeedBackResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      private int limit;
+      private long cursor;
+      public getFeedBack_call(thrift.OpHandle handle, int receiverId, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeedBackResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
         this.handle = handle;
         this.receiverId = receiverId;
-        this.count = count;
-        this.offset = offset;
+        this.limit = limit;
+        this.cursor = cursor;
       }
 
       public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
@@ -3238,8 +3238,8 @@ public class MiotoCarService {
         getFeedBack_args args = new getFeedBack_args();
         args.setHandle(handle);
         args.setReceiverId(receiverId);
-        args.setCount(count);
-        args.setOffset(offset);
+        args.setLimit(limit);
+        args.setCursor(cursor);
         args.write(prot);
         prot.writeMessageEnd();
       }
@@ -3359,9 +3359,9 @@ public class MiotoCarService {
       }
     }
 
-    public void getVoucher(thrift.OpHandle handle, java.lang.String title, int count, int offset, java.lang.String code, org.apache.thrift.async.AsyncMethodCallback<thrift.TListVoucherResult> resultHandler) throws org.apache.thrift.TException {
+    public void getVoucher(thrift.OpHandle handle, java.lang.String title, int limit, long cursor, java.lang.String code, org.apache.thrift.async.AsyncMethodCallback<thrift.TListVoucherResult> resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      getVoucher_call method_call = new getVoucher_call(handle, title, count, offset, code, resultHandler, this, ___protocolFactory, ___transport);
+      getVoucher_call method_call = new getVoucher_call(handle, title, limit, cursor, code, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
@@ -3369,15 +3369,15 @@ public class MiotoCarService {
     public static class getVoucher_call extends org.apache.thrift.async.TAsyncMethodCall<thrift.TListVoucherResult> {
       private thrift.OpHandle handle;
       private java.lang.String title;
-      private int count;
-      private int offset;
+      private int limit;
+      private long cursor;
       private java.lang.String code;
-      public getVoucher_call(thrift.OpHandle handle, java.lang.String title, int count, int offset, java.lang.String code, org.apache.thrift.async.AsyncMethodCallback<thrift.TListVoucherResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      public getVoucher_call(thrift.OpHandle handle, java.lang.String title, int limit, long cursor, java.lang.String code, org.apache.thrift.async.AsyncMethodCallback<thrift.TListVoucherResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
         this.handle = handle;
         this.title = title;
-        this.count = count;
-        this.offset = offset;
+        this.limit = limit;
+        this.cursor = cursor;
         this.code = code;
       }
 
@@ -3386,8 +3386,8 @@ public class MiotoCarService {
         getVoucher_args args = new getVoucher_args();
         args.setHandle(handle);
         args.setTitle(title);
-        args.setCount(count);
-        args.setOffset(offset);
+        args.setLimit(limit);
+        args.setCursor(cursor);
         args.setCode(code);
         args.write(prot);
         prot.writeMessageEnd();
@@ -3657,9 +3657,9 @@ public class MiotoCarService {
       }
     }
 
-    public void getCarViewByUserId(thrift.OpHandle handle, int userId, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListCarViewResult> resultHandler) throws org.apache.thrift.TException {
+    public void getCarViewByUserId(thrift.OpHandle handle, int userId, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListCarViewResult> resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      getCarViewByUserId_call method_call = new getCarViewByUserId_call(handle, userId, count, offset, resultHandler, this, ___protocolFactory, ___transport);
+      getCarViewByUserId_call method_call = new getCarViewByUserId_call(handle, userId, limit, cursor, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
@@ -3667,14 +3667,14 @@ public class MiotoCarService {
     public static class getCarViewByUserId_call extends org.apache.thrift.async.TAsyncMethodCall<thrift.TListCarViewResult> {
       private thrift.OpHandle handle;
       private int userId;
-      private int count;
-      private int offset;
-      public getCarViewByUserId_call(thrift.OpHandle handle, int userId, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListCarViewResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      private int limit;
+      private long cursor;
+      public getCarViewByUserId_call(thrift.OpHandle handle, int userId, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListCarViewResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
         this.handle = handle;
         this.userId = userId;
-        this.count = count;
-        this.offset = offset;
+        this.limit = limit;
+        this.cursor = cursor;
       }
 
       public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
@@ -3682,8 +3682,8 @@ public class MiotoCarService {
         getCarViewByUserId_args args = new getCarViewByUserId_args();
         args.setHandle(handle);
         args.setUserId(userId);
-        args.setCount(count);
-        args.setOffset(offset);
+        args.setLimit(limit);
+        args.setCursor(cursor);
         args.write(prot);
         prot.writeMessageEnd();
       }
@@ -4236,9 +4236,9 @@ public class MiotoCarService {
       }
     }
 
-    public void getRole(thrift.OpHandle handle, java.lang.String name, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListRoleResult> resultHandler) throws org.apache.thrift.TException {
+    public void getRole(thrift.OpHandle handle, java.lang.String name, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListRoleResult> resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      getRole_call method_call = new getRole_call(handle, name, count, offset, resultHandler, this, ___protocolFactory, ___transport);
+      getRole_call method_call = new getRole_call(handle, name, limit, cursor, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
@@ -4246,14 +4246,14 @@ public class MiotoCarService {
     public static class getRole_call extends org.apache.thrift.async.TAsyncMethodCall<thrift.TListRoleResult> {
       private thrift.OpHandle handle;
       private java.lang.String name;
-      private int count;
-      private int offset;
-      public getRole_call(thrift.OpHandle handle, java.lang.String name, int count, int offset, org.apache.thrift.async.AsyncMethodCallback<thrift.TListRoleResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      private int limit;
+      private long cursor;
+      public getRole_call(thrift.OpHandle handle, java.lang.String name, int limit, long cursor, org.apache.thrift.async.AsyncMethodCallback<thrift.TListRoleResult> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
         this.handle = handle;
         this.name = name;
-        this.count = count;
-        this.offset = offset;
+        this.limit = limit;
+        this.cursor = cursor;
       }
 
       public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
@@ -4261,8 +4261,8 @@ public class MiotoCarService {
         getRole_args args = new getRole_args();
         args.setHandle(handle);
         args.setName(name);
-        args.setCount(count);
-        args.setOffset(offset);
+        args.setLimit(limit);
+        args.setCursor(cursor);
         args.write(prot);
         prot.writeMessageEnd();
       }
@@ -4683,7 +4683,7 @@ public class MiotoCarService {
 
       public getAllUser_result getResult(I iface, getAllUser_args args) throws org.apache.thrift.TException {
         getAllUser_result result = new getAllUser_result();
-        result.success = iface.getAllUser(args.handle, args.status, args.count, args.offset);
+        result.success = iface.getAllUser(args.handle, args.status, args.limit, args.cursor);
         return result;
       }
     }
@@ -4783,7 +4783,7 @@ public class MiotoCarService {
 
       public getFeePolicy_result getResult(I iface, getFeePolicy_args args) throws org.apache.thrift.TException {
         getFeePolicy_result result = new getFeePolicy_result();
-        result.success = iface.getFeePolicy(args.handle, args.name, args.count, args.offset);
+        result.success = iface.getFeePolicy(args.handle, args.name, args.limit, args.cursor);
         return result;
       }
     }
@@ -4908,7 +4908,7 @@ public class MiotoCarService {
 
       public getProvince_result getResult(I iface, getProvince_args args) throws org.apache.thrift.TException {
         getProvince_result result = new getProvince_result();
-        result.success = iface.getProvince(args.handle, args.provinceName, args.count, args.offset);
+        result.success = iface.getProvince(args.handle, args.provinceName, args.limit, args.cursor);
         return result;
       }
     }
@@ -5033,7 +5033,7 @@ public class MiotoCarService {
 
       public getDistrict_result getResult(I iface, getDistrict_args args) throws org.apache.thrift.TException {
         getDistrict_result result = new getDistrict_result();
-        result.success = iface.getDistrict(args.handle, args.provinceId, args.count, args.offset);
+        result.success = iface.getDistrict(args.handle, args.provinceId, args.limit, args.cursor);
         return result;
       }
     }
@@ -5283,7 +5283,7 @@ public class MiotoCarService {
 
       public getFeature_result getResult(I iface, getFeature_args args) throws org.apache.thrift.TException {
         getFeature_result result = new getFeature_result();
-        result.success = iface.getFeature(args.handle, args.nameFeature, args.count, args.offset);
+        result.success = iface.getFeature(args.handle, args.nameFeature, args.limit, args.cursor);
         return result;
       }
     }
@@ -5408,7 +5408,7 @@ public class MiotoCarService {
 
       public getFeedBack_result getResult(I iface, getFeedBack_args args) throws org.apache.thrift.TException {
         getFeedBack_result result = new getFeedBack_result();
-        result.success = iface.getFeedBack(args.handle, args.receiverId, args.count, args.offset);
+        result.success = iface.getFeedBack(args.handle, args.receiverId, args.limit, args.cursor);
         return result;
       }
     }
@@ -5508,7 +5508,7 @@ public class MiotoCarService {
 
       public getVoucher_result getResult(I iface, getVoucher_args args) throws org.apache.thrift.TException {
         getVoucher_result result = new getVoucher_result();
-        result.success = iface.getVoucher(args.handle, args.title, args.count, args.offset, args.code);
+        result.success = iface.getVoucher(args.handle, args.title, args.limit, args.cursor, args.code);
         return result;
       }
     }
@@ -5708,7 +5708,7 @@ public class MiotoCarService {
 
       public getCarViewByUserId_result getResult(I iface, getCarViewByUserId_args args) throws org.apache.thrift.TException {
         getCarViewByUserId_result result = new getCarViewByUserId_result();
-        result.success = iface.getCarViewByUserId(args.handle, args.userId, args.count, args.offset);
+        result.success = iface.getCarViewByUserId(args.handle, args.userId, args.limit, args.cursor);
         return result;
       }
     }
@@ -6083,7 +6083,7 @@ public class MiotoCarService {
 
       public getRole_result getResult(I iface, getRole_args args) throws org.apache.thrift.TException {
         getRole_result result = new getRole_result();
-        result.success = iface.getRole(args.handle, args.name, args.count, args.offset);
+        result.success = iface.getRole(args.handle, args.name, args.limit, args.cursor);
         return result;
       }
     }
@@ -6659,7 +6659,7 @@ public class MiotoCarService {
       }
 
       public void start(I iface, getAllUser_args args, org.apache.thrift.async.AsyncMethodCallback<thrift.TListUserResult> resultHandler) throws org.apache.thrift.TException {
-        iface.getAllUser(args.handle, args.status, args.count, args.offset,resultHandler);
+        iface.getAllUser(args.handle, args.status, args.limit, args.cursor,resultHandler);
       }
     }
 
@@ -6903,7 +6903,7 @@ public class MiotoCarService {
       }
 
       public void start(I iface, getFeePolicy_args args, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeePolicyResult> resultHandler) throws org.apache.thrift.TException {
-        iface.getFeePolicy(args.handle, args.name, args.count, args.offset,resultHandler);
+        iface.getFeePolicy(args.handle, args.name, args.limit, args.cursor,resultHandler);
       }
     }
 
@@ -7208,7 +7208,7 @@ public class MiotoCarService {
       }
 
       public void start(I iface, getProvince_args args, org.apache.thrift.async.AsyncMethodCallback<thrift.TListProvinceResult> resultHandler) throws org.apache.thrift.TException {
-        iface.getProvince(args.handle, args.provinceName, args.count, args.offset,resultHandler);
+        iface.getProvince(args.handle, args.provinceName, args.limit, args.cursor,resultHandler);
       }
     }
 
@@ -7513,7 +7513,7 @@ public class MiotoCarService {
       }
 
       public void start(I iface, getDistrict_args args, org.apache.thrift.async.AsyncMethodCallback<thrift.TListDistrictResult> resultHandler) throws org.apache.thrift.TException {
-        iface.getDistrict(args.handle, args.provinceId, args.count, args.offset,resultHandler);
+        iface.getDistrict(args.handle, args.provinceId, args.limit, args.cursor,resultHandler);
       }
     }
 
@@ -8123,7 +8123,7 @@ public class MiotoCarService {
       }
 
       public void start(I iface, getFeature_args args, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeatureResult> resultHandler) throws org.apache.thrift.TException {
-        iface.getFeature(args.handle, args.nameFeature, args.count, args.offset,resultHandler);
+        iface.getFeature(args.handle, args.nameFeature, args.limit, args.cursor,resultHandler);
       }
     }
 
@@ -8428,7 +8428,7 @@ public class MiotoCarService {
       }
 
       public void start(I iface, getFeedBack_args args, org.apache.thrift.async.AsyncMethodCallback<thrift.TListFeedBackResult> resultHandler) throws org.apache.thrift.TException {
-        iface.getFeedBack(args.handle, args.receiverId, args.count, args.offset,resultHandler);
+        iface.getFeedBack(args.handle, args.receiverId, args.limit, args.cursor,resultHandler);
       }
     }
 
@@ -8672,7 +8672,7 @@ public class MiotoCarService {
       }
 
       public void start(I iface, getVoucher_args args, org.apache.thrift.async.AsyncMethodCallback<thrift.TListVoucherResult> resultHandler) throws org.apache.thrift.TException {
-        iface.getVoucher(args.handle, args.title, args.count, args.offset, args.code,resultHandler);
+        iface.getVoucher(args.handle, args.title, args.limit, args.cursor, args.code,resultHandler);
       }
     }
 
@@ -9160,7 +9160,7 @@ public class MiotoCarService {
       }
 
       public void start(I iface, getCarViewByUserId_args args, org.apache.thrift.async.AsyncMethodCallback<thrift.TListCarViewResult> resultHandler) throws org.apache.thrift.TException {
-        iface.getCarViewByUserId(args.handle, args.userId, args.count, args.offset,resultHandler);
+        iface.getCarViewByUserId(args.handle, args.userId, args.limit, args.cursor,resultHandler);
       }
     }
 
@@ -10075,7 +10075,7 @@ public class MiotoCarService {
       }
 
       public void start(I iface, getRole_args args, org.apache.thrift.async.AsyncMethodCallback<thrift.TListRoleResult> resultHandler) throws org.apache.thrift.TException {
-        iface.getRole(args.handle, args.name, args.count, args.offset,resultHandler);
+        iface.getRole(args.handle, args.name, args.limit, args.cursor,resultHandler);
       }
     }
 
@@ -14792,23 +14792,23 @@ public class MiotoCarService {
 
     private static final org.apache.thrift.protocol.TField HANDLE_FIELD_DESC = new org.apache.thrift.protocol.TField("handle", org.apache.thrift.protocol.TType.STRUCT, (short)1);
     private static final org.apache.thrift.protocol.TField STATUS_FIELD_DESC = new org.apache.thrift.protocol.TField("status", org.apache.thrift.protocol.TType.I32, (short)2);
-    private static final org.apache.thrift.protocol.TField COUNT_FIELD_DESC = new org.apache.thrift.protocol.TField("count", org.apache.thrift.protocol.TType.I32, (short)3);
-    private static final org.apache.thrift.protocol.TField OFFSET_FIELD_DESC = new org.apache.thrift.protocol.TField("offset", org.apache.thrift.protocol.TType.I32, (short)4);
+    private static final org.apache.thrift.protocol.TField LIMIT_FIELD_DESC = new org.apache.thrift.protocol.TField("limit", org.apache.thrift.protocol.TType.I32, (short)3);
+    private static final org.apache.thrift.protocol.TField CURSOR_FIELD_DESC = new org.apache.thrift.protocol.TField("cursor", org.apache.thrift.protocol.TType.I64, (short)4);
 
     private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new getAllUser_argsStandardSchemeFactory();
     private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getAllUser_argsTupleSchemeFactory();
 
     public @org.apache.thrift.annotation.Nullable thrift.OpHandle handle; // required
     public int status; // required
-    public int count; // required
-    public int offset; // required
+    public int limit; // required
+    public long cursor; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       HANDLE((short)1, "handle"),
       STATUS((short)2, "status"),
-      COUNT((short)3, "count"),
-      OFFSET((short)4, "offset");
+      LIMIT((short)3, "limit"),
+      CURSOR((short)4, "cursor");
 
       private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -14828,10 +14828,10 @@ public class MiotoCarService {
             return HANDLE;
           case 2: // STATUS
             return STATUS;
-          case 3: // COUNT
-            return COUNT;
-          case 4: // OFFSET
-            return OFFSET;
+          case 3: // LIMIT
+            return LIMIT;
+          case 4: // CURSOR
+            return CURSOR;
           default:
             return null;
         }
@@ -14874,8 +14874,8 @@ public class MiotoCarService {
 
     // isset id assignments
     private static final int __STATUS_ISSET_ID = 0;
-    private static final int __COUNT_ISSET_ID = 1;
-    private static final int __OFFSET_ISSET_ID = 2;
+    private static final int __LIMIT_ISSET_ID = 1;
+    private static final int __CURSOR_ISSET_ID = 2;
     private byte __isset_bitfield = 0;
     public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
@@ -14884,10 +14884,10 @@ public class MiotoCarService {
           new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, thrift.OpHandle.class)));
       tmpMap.put(_Fields.STATUS, new org.apache.thrift.meta_data.FieldMetaData("status", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.COUNT, new org.apache.thrift.meta_data.FieldMetaData("count", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+      tmpMap.put(_Fields.LIMIT, new org.apache.thrift.meta_data.FieldMetaData("limit", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.OFFSET, new org.apache.thrift.meta_data.FieldMetaData("offset", org.apache.thrift.TFieldRequirementType.DEFAULT, 
-          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
+      tmpMap.put(_Fields.CURSOR, new org.apache.thrift.meta_data.FieldMetaData("cursor", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
       metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
       org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getAllUser_args.class, metaDataMap);
     }
@@ -14898,17 +14898,17 @@ public class MiotoCarService {
     public getAllUser_args(
       thrift.OpHandle handle,
       int status,
-      int count,
-      int offset)
+      int limit,
+      long cursor)
     {
       this();
       this.handle = handle;
       this.status = status;
       setStatusIsSet(true);
-      this.count = count;
-      setCountIsSet(true);
-      this.offset = offset;
-      setOffsetIsSet(true);
+      this.limit = limit;
+      setLimitIsSet(true);
+      this.cursor = cursor;
+      setCursorIsSet(true);
     }
 
     /**
@@ -14920,8 +14920,8 @@ public class MiotoCarService {
         this.handle = new thrift.OpHandle(other.handle);
       }
       this.status = other.status;
-      this.count = other.count;
-      this.offset = other.offset;
+      this.limit = other.limit;
+      this.cursor = other.cursor;
     }
 
     public getAllUser_args deepCopy() {
@@ -14933,10 +14933,10 @@ public class MiotoCarService {
       this.handle = null;
       setStatusIsSet(false);
       this.status = 0;
-      setCountIsSet(false);
-      this.count = 0;
-      setOffsetIsSet(false);
-      this.offset = 0;
+      setLimitIsSet(false);
+      this.limit = 0;
+      setCursorIsSet(false);
+      this.cursor = 0;
     }
 
     @org.apache.thrift.annotation.Nullable
@@ -14987,50 +14987,50 @@ public class MiotoCarService {
       __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __STATUS_ISSET_ID, value);
     }
 
-    public int getCount() {
-      return this.count;
+    public int getLimit() {
+      return this.limit;
     }
 
-    public getAllUser_args setCount(int count) {
-      this.count = count;
-      setCountIsSet(true);
+    public getAllUser_args setLimit(int limit) {
+      this.limit = limit;
+      setLimitIsSet(true);
       return this;
     }
 
-    public void unsetCount() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNT_ISSET_ID);
+    public void unsetLimit() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    /** Returns true if field count is set (has been assigned a value) and false otherwise */
-    public boolean isSetCount() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNT_ISSET_ID);
+    /** Returns true if field limit is set (has been assigned a value) and false otherwise */
+    public boolean isSetLimit() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    public void setCountIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __COUNT_ISSET_ID, value);
+    public void setLimitIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __LIMIT_ISSET_ID, value);
     }
 
-    public int getOffset() {
-      return this.offset;
+    public long getCursor() {
+      return this.cursor;
     }
 
-    public getAllUser_args setOffset(int offset) {
-      this.offset = offset;
-      setOffsetIsSet(true);
+    public getAllUser_args setCursor(long cursor) {
+      this.cursor = cursor;
+      setCursorIsSet(true);
       return this;
     }
 
-    public void unsetOffset() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    public void unsetCursor() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    /** Returns true if field offset is set (has been assigned a value) and false otherwise */
-    public boolean isSetOffset() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    /** Returns true if field cursor is set (has been assigned a value) and false otherwise */
+    public boolean isSetCursor() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    public void setOffsetIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __OFFSET_ISSET_ID, value);
+    public void setCursorIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __CURSOR_ISSET_ID, value);
     }
 
     public void setFieldValue(_Fields field, @org.apache.thrift.annotation.Nullable java.lang.Object value) {
@@ -15051,19 +15051,19 @@ public class MiotoCarService {
         }
         break;
 
-      case COUNT:
+      case LIMIT:
         if (value == null) {
-          unsetCount();
+          unsetLimit();
         } else {
-          setCount((java.lang.Integer)value);
+          setLimit((java.lang.Integer)value);
         }
         break;
 
-      case OFFSET:
+      case CURSOR:
         if (value == null) {
-          unsetOffset();
+          unsetCursor();
         } else {
-          setOffset((java.lang.Integer)value);
+          setCursor((java.lang.Long)value);
         }
         break;
 
@@ -15079,11 +15079,11 @@ public class MiotoCarService {
       case STATUS:
         return getStatus();
 
-      case COUNT:
-        return getCount();
+      case LIMIT:
+        return getLimit();
 
-      case OFFSET:
-        return getOffset();
+      case CURSOR:
+        return getCursor();
 
       }
       throw new java.lang.IllegalStateException();
@@ -15100,10 +15100,10 @@ public class MiotoCarService {
         return isSetHandle();
       case STATUS:
         return isSetStatus();
-      case COUNT:
-        return isSetCount();
-      case OFFSET:
-        return isSetOffset();
+      case LIMIT:
+        return isSetLimit();
+      case CURSOR:
+        return isSetCursor();
       }
       throw new java.lang.IllegalStateException();
     }
@@ -15141,21 +15141,21 @@ public class MiotoCarService {
           return false;
       }
 
-      boolean this_present_count = true;
-      boolean that_present_count = true;
-      if (this_present_count || that_present_count) {
-        if (!(this_present_count && that_present_count))
+      boolean this_present_limit = true;
+      boolean that_present_limit = true;
+      if (this_present_limit || that_present_limit) {
+        if (!(this_present_limit && that_present_limit))
           return false;
-        if (this.count != that.count)
+        if (this.limit != that.limit)
           return false;
       }
 
-      boolean this_present_offset = true;
-      boolean that_present_offset = true;
-      if (this_present_offset || that_present_offset) {
-        if (!(this_present_offset && that_present_offset))
+      boolean this_present_cursor = true;
+      boolean that_present_cursor = true;
+      if (this_present_cursor || that_present_cursor) {
+        if (!(this_present_cursor && that_present_cursor))
           return false;
-        if (this.offset != that.offset)
+        if (this.cursor != that.cursor)
           return false;
       }
 
@@ -15172,9 +15172,9 @@ public class MiotoCarService {
 
       hashCode = hashCode * 8191 + status;
 
-      hashCode = hashCode * 8191 + count;
+      hashCode = hashCode * 8191 + limit;
 
-      hashCode = hashCode * 8191 + offset;
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(cursor);
 
       return hashCode;
     }
@@ -15207,22 +15207,22 @@ public class MiotoCarService {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetCount()).compareTo(other.isSetCount());
+      lastComparison = java.lang.Boolean.valueOf(isSetLimit()).compareTo(other.isSetLimit());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetCount()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.count, other.count);
+      if (isSetLimit()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.limit, other.limit);
         if (lastComparison != 0) {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetOffset()).compareTo(other.isSetOffset());
+      lastComparison = java.lang.Boolean.valueOf(isSetCursor()).compareTo(other.isSetCursor());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetOffset()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.offset, other.offset);
+      if (isSetCursor()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.cursor, other.cursor);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -15260,12 +15260,12 @@ public class MiotoCarService {
       sb.append(this.status);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("count:");
-      sb.append(this.count);
+      sb.append("limit:");
+      sb.append(this.limit);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("offset:");
-      sb.append(this.offset);
+      sb.append("cursor:");
+      sb.append(this.cursor);
       first = false;
       sb.append(")");
       return sb.toString();
@@ -15335,18 +15335,18 @@ public class MiotoCarService {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 3: // COUNT
+            case 3: // LIMIT
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.count = iprot.readI32();
-                struct.setCountIsSet(true);
+                struct.limit = iprot.readI32();
+                struct.setLimitIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 4: // OFFSET
-              if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.offset = iprot.readI32();
-                struct.setOffsetIsSet(true);
+            case 4: // CURSOR
+              if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+                struct.cursor = iprot.readI64();
+                struct.setCursorIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -15374,11 +15374,11 @@ public class MiotoCarService {
         oprot.writeFieldBegin(STATUS_FIELD_DESC);
         oprot.writeI32(struct.status);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(COUNT_FIELD_DESC);
-        oprot.writeI32(struct.count);
+        oprot.writeFieldBegin(LIMIT_FIELD_DESC);
+        oprot.writeI32(struct.limit);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(OFFSET_FIELD_DESC);
-        oprot.writeI32(struct.offset);
+        oprot.writeFieldBegin(CURSOR_FIELD_DESC);
+        oprot.writeI64(struct.cursor);
         oprot.writeFieldEnd();
         oprot.writeFieldStop();
         oprot.writeStructEnd();
@@ -15402,21 +15402,21 @@ public class MiotoCarService {
         if (struct.isSetStatus()) {
           optionals.set(0);
         }
-        if (struct.isSetCount()) {
+        if (struct.isSetLimit()) {
           optionals.set(1);
         }
-        if (struct.isSetOffset()) {
+        if (struct.isSetCursor()) {
           optionals.set(2);
         }
         oprot.writeBitSet(optionals, 3);
         if (struct.isSetStatus()) {
           oprot.writeI32(struct.status);
         }
-        if (struct.isSetCount()) {
-          oprot.writeI32(struct.count);
+        if (struct.isSetLimit()) {
+          oprot.writeI32(struct.limit);
         }
-        if (struct.isSetOffset()) {
-          oprot.writeI32(struct.offset);
+        if (struct.isSetCursor()) {
+          oprot.writeI64(struct.cursor);
         }
       }
 
@@ -15432,12 +15432,12 @@ public class MiotoCarService {
           struct.setStatusIsSet(true);
         }
         if (incoming.get(1)) {
-          struct.count = iprot.readI32();
-          struct.setCountIsSet(true);
+          struct.limit = iprot.readI32();
+          struct.setLimitIsSet(true);
         }
         if (incoming.get(2)) {
-          struct.offset = iprot.readI32();
-          struct.setOffsetIsSet(true);
+          struct.cursor = iprot.readI64();
+          struct.setCursorIsSet(true);
         }
       }
     }
@@ -18353,23 +18353,23 @@ public class MiotoCarService {
 
     private static final org.apache.thrift.protocol.TField HANDLE_FIELD_DESC = new org.apache.thrift.protocol.TField("handle", org.apache.thrift.protocol.TType.STRUCT, (short)1);
     private static final org.apache.thrift.protocol.TField NAME_FIELD_DESC = new org.apache.thrift.protocol.TField("name", org.apache.thrift.protocol.TType.STRING, (short)2);
-    private static final org.apache.thrift.protocol.TField COUNT_FIELD_DESC = new org.apache.thrift.protocol.TField("count", org.apache.thrift.protocol.TType.I32, (short)3);
-    private static final org.apache.thrift.protocol.TField OFFSET_FIELD_DESC = new org.apache.thrift.protocol.TField("offset", org.apache.thrift.protocol.TType.I32, (short)4);
+    private static final org.apache.thrift.protocol.TField LIMIT_FIELD_DESC = new org.apache.thrift.protocol.TField("limit", org.apache.thrift.protocol.TType.I32, (short)3);
+    private static final org.apache.thrift.protocol.TField CURSOR_FIELD_DESC = new org.apache.thrift.protocol.TField("cursor", org.apache.thrift.protocol.TType.I64, (short)4);
 
     private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new getFeePolicy_argsStandardSchemeFactory();
     private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getFeePolicy_argsTupleSchemeFactory();
 
     public @org.apache.thrift.annotation.Nullable thrift.OpHandle handle; // required
     public @org.apache.thrift.annotation.Nullable java.lang.String name; // required
-    public int count; // required
-    public int offset; // required
+    public int limit; // required
+    public long cursor; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       HANDLE((short)1, "handle"),
       NAME((short)2, "name"),
-      COUNT((short)3, "count"),
-      OFFSET((short)4, "offset");
+      LIMIT((short)3, "limit"),
+      CURSOR((short)4, "cursor");
 
       private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -18389,10 +18389,10 @@ public class MiotoCarService {
             return HANDLE;
           case 2: // NAME
             return NAME;
-          case 3: // COUNT
-            return COUNT;
-          case 4: // OFFSET
-            return OFFSET;
+          case 3: // LIMIT
+            return LIMIT;
+          case 4: // CURSOR
+            return CURSOR;
           default:
             return null;
         }
@@ -18434,8 +18434,8 @@ public class MiotoCarService {
     }
 
     // isset id assignments
-    private static final int __COUNT_ISSET_ID = 0;
-    private static final int __OFFSET_ISSET_ID = 1;
+    private static final int __LIMIT_ISSET_ID = 0;
+    private static final int __CURSOR_ISSET_ID = 1;
     private byte __isset_bitfield = 0;
     public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
@@ -18444,10 +18444,10 @@ public class MiotoCarService {
           new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, thrift.OpHandle.class)));
       tmpMap.put(_Fields.NAME, new org.apache.thrift.meta_data.FieldMetaData("name", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-      tmpMap.put(_Fields.COUNT, new org.apache.thrift.meta_data.FieldMetaData("count", org.apache.thrift.TFieldRequirementType.REQUIRED, 
+      tmpMap.put(_Fields.LIMIT, new org.apache.thrift.meta_data.FieldMetaData("limit", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.OFFSET, new org.apache.thrift.meta_data.FieldMetaData("offset", org.apache.thrift.TFieldRequirementType.REQUIRED, 
-          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
+      tmpMap.put(_Fields.CURSOR, new org.apache.thrift.meta_data.FieldMetaData("cursor", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
       metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
       org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getFeePolicy_args.class, metaDataMap);
     }
@@ -18458,16 +18458,16 @@ public class MiotoCarService {
     public getFeePolicy_args(
       thrift.OpHandle handle,
       java.lang.String name,
-      int count,
-      int offset)
+      int limit,
+      long cursor)
     {
       this();
       this.handle = handle;
       this.name = name;
-      this.count = count;
-      setCountIsSet(true);
-      this.offset = offset;
-      setOffsetIsSet(true);
+      this.limit = limit;
+      setLimitIsSet(true);
+      this.cursor = cursor;
+      setCursorIsSet(true);
     }
 
     /**
@@ -18481,8 +18481,8 @@ public class MiotoCarService {
       if (other.isSetName()) {
         this.name = other.name;
       }
-      this.count = other.count;
-      this.offset = other.offset;
+      this.limit = other.limit;
+      this.cursor = other.cursor;
     }
 
     public getFeePolicy_args deepCopy() {
@@ -18493,10 +18493,10 @@ public class MiotoCarService {
     public void clear() {
       this.handle = null;
       this.name = null;
-      setCountIsSet(false);
-      this.count = 0;
-      setOffsetIsSet(false);
-      this.offset = 0;
+      setLimitIsSet(false);
+      this.limit = 0;
+      setCursorIsSet(false);
+      this.cursor = 0;
     }
 
     @org.apache.thrift.annotation.Nullable
@@ -18549,50 +18549,50 @@ public class MiotoCarService {
       }
     }
 
-    public int getCount() {
-      return this.count;
+    public int getLimit() {
+      return this.limit;
     }
 
-    public getFeePolicy_args setCount(int count) {
-      this.count = count;
-      setCountIsSet(true);
+    public getFeePolicy_args setLimit(int limit) {
+      this.limit = limit;
+      setLimitIsSet(true);
       return this;
     }
 
-    public void unsetCount() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNT_ISSET_ID);
+    public void unsetLimit() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    /** Returns true if field count is set (has been assigned a value) and false otherwise */
-    public boolean isSetCount() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNT_ISSET_ID);
+    /** Returns true if field limit is set (has been assigned a value) and false otherwise */
+    public boolean isSetLimit() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    public void setCountIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __COUNT_ISSET_ID, value);
+    public void setLimitIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __LIMIT_ISSET_ID, value);
     }
 
-    public int getOffset() {
-      return this.offset;
+    public long getCursor() {
+      return this.cursor;
     }
 
-    public getFeePolicy_args setOffset(int offset) {
-      this.offset = offset;
-      setOffsetIsSet(true);
+    public getFeePolicy_args setCursor(long cursor) {
+      this.cursor = cursor;
+      setCursorIsSet(true);
       return this;
     }
 
-    public void unsetOffset() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    public void unsetCursor() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    /** Returns true if field offset is set (has been assigned a value) and false otherwise */
-    public boolean isSetOffset() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    /** Returns true if field cursor is set (has been assigned a value) and false otherwise */
+    public boolean isSetCursor() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    public void setOffsetIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __OFFSET_ISSET_ID, value);
+    public void setCursorIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __CURSOR_ISSET_ID, value);
     }
 
     public void setFieldValue(_Fields field, @org.apache.thrift.annotation.Nullable java.lang.Object value) {
@@ -18613,19 +18613,19 @@ public class MiotoCarService {
         }
         break;
 
-      case COUNT:
+      case LIMIT:
         if (value == null) {
-          unsetCount();
+          unsetLimit();
         } else {
-          setCount((java.lang.Integer)value);
+          setLimit((java.lang.Integer)value);
         }
         break;
 
-      case OFFSET:
+      case CURSOR:
         if (value == null) {
-          unsetOffset();
+          unsetCursor();
         } else {
-          setOffset((java.lang.Integer)value);
+          setCursor((java.lang.Long)value);
         }
         break;
 
@@ -18641,11 +18641,11 @@ public class MiotoCarService {
       case NAME:
         return getName();
 
-      case COUNT:
-        return getCount();
+      case LIMIT:
+        return getLimit();
 
-      case OFFSET:
-        return getOffset();
+      case CURSOR:
+        return getCursor();
 
       }
       throw new java.lang.IllegalStateException();
@@ -18662,10 +18662,10 @@ public class MiotoCarService {
         return isSetHandle();
       case NAME:
         return isSetName();
-      case COUNT:
-        return isSetCount();
-      case OFFSET:
-        return isSetOffset();
+      case LIMIT:
+        return isSetLimit();
+      case CURSOR:
+        return isSetCursor();
       }
       throw new java.lang.IllegalStateException();
     }
@@ -18703,21 +18703,21 @@ public class MiotoCarService {
           return false;
       }
 
-      boolean this_present_count = true;
-      boolean that_present_count = true;
-      if (this_present_count || that_present_count) {
-        if (!(this_present_count && that_present_count))
+      boolean this_present_limit = true;
+      boolean that_present_limit = true;
+      if (this_present_limit || that_present_limit) {
+        if (!(this_present_limit && that_present_limit))
           return false;
-        if (this.count != that.count)
+        if (this.limit != that.limit)
           return false;
       }
 
-      boolean this_present_offset = true;
-      boolean that_present_offset = true;
-      if (this_present_offset || that_present_offset) {
-        if (!(this_present_offset && that_present_offset))
+      boolean this_present_cursor = true;
+      boolean that_present_cursor = true;
+      if (this_present_cursor || that_present_cursor) {
+        if (!(this_present_cursor && that_present_cursor))
           return false;
-        if (this.offset != that.offset)
+        if (this.cursor != that.cursor)
           return false;
       }
 
@@ -18736,9 +18736,9 @@ public class MiotoCarService {
       if (isSetName())
         hashCode = hashCode * 8191 + name.hashCode();
 
-      hashCode = hashCode * 8191 + count;
+      hashCode = hashCode * 8191 + limit;
 
-      hashCode = hashCode * 8191 + offset;
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(cursor);
 
       return hashCode;
     }
@@ -18771,22 +18771,22 @@ public class MiotoCarService {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetCount()).compareTo(other.isSetCount());
+      lastComparison = java.lang.Boolean.valueOf(isSetLimit()).compareTo(other.isSetLimit());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetCount()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.count, other.count);
+      if (isSetLimit()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.limit, other.limit);
         if (lastComparison != 0) {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetOffset()).compareTo(other.isSetOffset());
+      lastComparison = java.lang.Boolean.valueOf(isSetCursor()).compareTo(other.isSetCursor());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetOffset()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.offset, other.offset);
+      if (isSetCursor()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.cursor, other.cursor);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -18828,12 +18828,12 @@ public class MiotoCarService {
       }
       first = false;
       if (!first) sb.append(", ");
-      sb.append("count:");
-      sb.append(this.count);
+      sb.append("limit:");
+      sb.append(this.limit);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("offset:");
-      sb.append(this.offset);
+      sb.append("cursor:");
+      sb.append(this.cursor);
       first = false;
       sb.append(")");
       return sb.toString();
@@ -18844,8 +18844,6 @@ public class MiotoCarService {
       if (handle == null) {
         throw new org.apache.thrift.protocol.TProtocolException("Required field 'handle' was not present! Struct: " + toString());
       }
-      // alas, we cannot check 'count' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'offset' because it's a primitive and you chose the non-beans generator.
       // check for sub-struct validity
       if (handle != null) {
         handle.validate();
@@ -18905,18 +18903,18 @@ public class MiotoCarService {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 3: // COUNT
+            case 3: // LIMIT
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.count = iprot.readI32();
-                struct.setCountIsSet(true);
+                struct.limit = iprot.readI32();
+                struct.setLimitIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 4: // OFFSET
-              if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.offset = iprot.readI32();
-                struct.setOffsetIsSet(true);
+            case 4: // CURSOR
+              if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+                struct.cursor = iprot.readI64();
+                struct.setCursorIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -18929,12 +18927,6 @@ public class MiotoCarService {
         iprot.readStructEnd();
 
         // check for required fields of primitive type, which can't be checked in the validate method
-        if (!struct.isSetCount()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'count' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetOffset()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'offset' was not found in serialized data! Struct: " + toString());
-        }
         struct.validate();
       }
 
@@ -18952,11 +18944,11 @@ public class MiotoCarService {
           oprot.writeString(struct.name);
           oprot.writeFieldEnd();
         }
-        oprot.writeFieldBegin(COUNT_FIELD_DESC);
-        oprot.writeI32(struct.count);
+        oprot.writeFieldBegin(LIMIT_FIELD_DESC);
+        oprot.writeI32(struct.limit);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(OFFSET_FIELD_DESC);
-        oprot.writeI32(struct.offset);
+        oprot.writeFieldBegin(CURSOR_FIELD_DESC);
+        oprot.writeI64(struct.cursor);
         oprot.writeFieldEnd();
         oprot.writeFieldStop();
         oprot.writeStructEnd();
@@ -18976,15 +18968,25 @@ public class MiotoCarService {
       public void write(org.apache.thrift.protocol.TProtocol prot, getFeePolicy_args struct) throws org.apache.thrift.TException {
         org.apache.thrift.protocol.TTupleProtocol oprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
         struct.handle.write(oprot);
-        oprot.writeI32(struct.count);
-        oprot.writeI32(struct.offset);
         java.util.BitSet optionals = new java.util.BitSet();
         if (struct.isSetName()) {
           optionals.set(0);
         }
-        oprot.writeBitSet(optionals, 1);
+        if (struct.isSetLimit()) {
+          optionals.set(1);
+        }
+        if (struct.isSetCursor()) {
+          optionals.set(2);
+        }
+        oprot.writeBitSet(optionals, 3);
         if (struct.isSetName()) {
           oprot.writeString(struct.name);
+        }
+        if (struct.isSetLimit()) {
+          oprot.writeI32(struct.limit);
+        }
+        if (struct.isSetCursor()) {
+          oprot.writeI64(struct.cursor);
         }
       }
 
@@ -18994,14 +18996,18 @@ public class MiotoCarService {
         struct.handle = new thrift.OpHandle();
         struct.handle.read(iprot);
         struct.setHandleIsSet(true);
-        struct.count = iprot.readI32();
-        struct.setCountIsSet(true);
-        struct.offset = iprot.readI32();
-        struct.setOffsetIsSet(true);
-        java.util.BitSet incoming = iprot.readBitSet(1);
+        java.util.BitSet incoming = iprot.readBitSet(3);
         if (incoming.get(0)) {
           struct.name = iprot.readString();
           struct.setNameIsSet(true);
+        }
+        if (incoming.get(1)) {
+          struct.limit = iprot.readI32();
+          struct.setLimitIsSet(true);
+        }
+        if (incoming.get(2)) {
+          struct.cursor = iprot.readI64();
+          struct.setCursorIsSet(true);
         }
       }
     }
@@ -22742,23 +22748,23 @@ public class MiotoCarService {
 
     private static final org.apache.thrift.protocol.TField HANDLE_FIELD_DESC = new org.apache.thrift.protocol.TField("handle", org.apache.thrift.protocol.TType.STRUCT, (short)1);
     private static final org.apache.thrift.protocol.TField PROVINCE_NAME_FIELD_DESC = new org.apache.thrift.protocol.TField("provinceName", org.apache.thrift.protocol.TType.STRING, (short)2);
-    private static final org.apache.thrift.protocol.TField COUNT_FIELD_DESC = new org.apache.thrift.protocol.TField("count", org.apache.thrift.protocol.TType.I32, (short)3);
-    private static final org.apache.thrift.protocol.TField OFFSET_FIELD_DESC = new org.apache.thrift.protocol.TField("offset", org.apache.thrift.protocol.TType.I32, (short)4);
+    private static final org.apache.thrift.protocol.TField LIMIT_FIELD_DESC = new org.apache.thrift.protocol.TField("limit", org.apache.thrift.protocol.TType.I32, (short)3);
+    private static final org.apache.thrift.protocol.TField CURSOR_FIELD_DESC = new org.apache.thrift.protocol.TField("cursor", org.apache.thrift.protocol.TType.I64, (short)4);
 
     private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new getProvince_argsStandardSchemeFactory();
     private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getProvince_argsTupleSchemeFactory();
 
     public @org.apache.thrift.annotation.Nullable thrift.OpHandle handle; // required
     public @org.apache.thrift.annotation.Nullable java.lang.String provinceName; // required
-    public int count; // required
-    public int offset; // required
+    public int limit; // required
+    public long cursor; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       HANDLE((short)1, "handle"),
       PROVINCE_NAME((short)2, "provinceName"),
-      COUNT((short)3, "count"),
-      OFFSET((short)4, "offset");
+      LIMIT((short)3, "limit"),
+      CURSOR((short)4, "cursor");
 
       private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -22778,10 +22784,10 @@ public class MiotoCarService {
             return HANDLE;
           case 2: // PROVINCE_NAME
             return PROVINCE_NAME;
-          case 3: // COUNT
-            return COUNT;
-          case 4: // OFFSET
-            return OFFSET;
+          case 3: // LIMIT
+            return LIMIT;
+          case 4: // CURSOR
+            return CURSOR;
           default:
             return null;
         }
@@ -22823,8 +22829,8 @@ public class MiotoCarService {
     }
 
     // isset id assignments
-    private static final int __COUNT_ISSET_ID = 0;
-    private static final int __OFFSET_ISSET_ID = 1;
+    private static final int __LIMIT_ISSET_ID = 0;
+    private static final int __CURSOR_ISSET_ID = 1;
     private byte __isset_bitfield = 0;
     public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
@@ -22833,10 +22839,10 @@ public class MiotoCarService {
           new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, thrift.OpHandle.class)));
       tmpMap.put(_Fields.PROVINCE_NAME, new org.apache.thrift.meta_data.FieldMetaData("provinceName", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-      tmpMap.put(_Fields.COUNT, new org.apache.thrift.meta_data.FieldMetaData("count", org.apache.thrift.TFieldRequirementType.REQUIRED, 
+      tmpMap.put(_Fields.LIMIT, new org.apache.thrift.meta_data.FieldMetaData("limit", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.OFFSET, new org.apache.thrift.meta_data.FieldMetaData("offset", org.apache.thrift.TFieldRequirementType.REQUIRED, 
-          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
+      tmpMap.put(_Fields.CURSOR, new org.apache.thrift.meta_data.FieldMetaData("cursor", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
       metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
       org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getProvince_args.class, metaDataMap);
     }
@@ -22847,16 +22853,16 @@ public class MiotoCarService {
     public getProvince_args(
       thrift.OpHandle handle,
       java.lang.String provinceName,
-      int count,
-      int offset)
+      int limit,
+      long cursor)
     {
       this();
       this.handle = handle;
       this.provinceName = provinceName;
-      this.count = count;
-      setCountIsSet(true);
-      this.offset = offset;
-      setOffsetIsSet(true);
+      this.limit = limit;
+      setLimitIsSet(true);
+      this.cursor = cursor;
+      setCursorIsSet(true);
     }
 
     /**
@@ -22870,8 +22876,8 @@ public class MiotoCarService {
       if (other.isSetProvinceName()) {
         this.provinceName = other.provinceName;
       }
-      this.count = other.count;
-      this.offset = other.offset;
+      this.limit = other.limit;
+      this.cursor = other.cursor;
     }
 
     public getProvince_args deepCopy() {
@@ -22882,10 +22888,10 @@ public class MiotoCarService {
     public void clear() {
       this.handle = null;
       this.provinceName = null;
-      setCountIsSet(false);
-      this.count = 0;
-      setOffsetIsSet(false);
-      this.offset = 0;
+      setLimitIsSet(false);
+      this.limit = 0;
+      setCursorIsSet(false);
+      this.cursor = 0;
     }
 
     @org.apache.thrift.annotation.Nullable
@@ -22938,50 +22944,50 @@ public class MiotoCarService {
       }
     }
 
-    public int getCount() {
-      return this.count;
+    public int getLimit() {
+      return this.limit;
     }
 
-    public getProvince_args setCount(int count) {
-      this.count = count;
-      setCountIsSet(true);
+    public getProvince_args setLimit(int limit) {
+      this.limit = limit;
+      setLimitIsSet(true);
       return this;
     }
 
-    public void unsetCount() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNT_ISSET_ID);
+    public void unsetLimit() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    /** Returns true if field count is set (has been assigned a value) and false otherwise */
-    public boolean isSetCount() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNT_ISSET_ID);
+    /** Returns true if field limit is set (has been assigned a value) and false otherwise */
+    public boolean isSetLimit() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    public void setCountIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __COUNT_ISSET_ID, value);
+    public void setLimitIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __LIMIT_ISSET_ID, value);
     }
 
-    public int getOffset() {
-      return this.offset;
+    public long getCursor() {
+      return this.cursor;
     }
 
-    public getProvince_args setOffset(int offset) {
-      this.offset = offset;
-      setOffsetIsSet(true);
+    public getProvince_args setCursor(long cursor) {
+      this.cursor = cursor;
+      setCursorIsSet(true);
       return this;
     }
 
-    public void unsetOffset() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    public void unsetCursor() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    /** Returns true if field offset is set (has been assigned a value) and false otherwise */
-    public boolean isSetOffset() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    /** Returns true if field cursor is set (has been assigned a value) and false otherwise */
+    public boolean isSetCursor() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    public void setOffsetIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __OFFSET_ISSET_ID, value);
+    public void setCursorIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __CURSOR_ISSET_ID, value);
     }
 
     public void setFieldValue(_Fields field, @org.apache.thrift.annotation.Nullable java.lang.Object value) {
@@ -23002,19 +23008,19 @@ public class MiotoCarService {
         }
         break;
 
-      case COUNT:
+      case LIMIT:
         if (value == null) {
-          unsetCount();
+          unsetLimit();
         } else {
-          setCount((java.lang.Integer)value);
+          setLimit((java.lang.Integer)value);
         }
         break;
 
-      case OFFSET:
+      case CURSOR:
         if (value == null) {
-          unsetOffset();
+          unsetCursor();
         } else {
-          setOffset((java.lang.Integer)value);
+          setCursor((java.lang.Long)value);
         }
         break;
 
@@ -23030,11 +23036,11 @@ public class MiotoCarService {
       case PROVINCE_NAME:
         return getProvinceName();
 
-      case COUNT:
-        return getCount();
+      case LIMIT:
+        return getLimit();
 
-      case OFFSET:
-        return getOffset();
+      case CURSOR:
+        return getCursor();
 
       }
       throw new java.lang.IllegalStateException();
@@ -23051,10 +23057,10 @@ public class MiotoCarService {
         return isSetHandle();
       case PROVINCE_NAME:
         return isSetProvinceName();
-      case COUNT:
-        return isSetCount();
-      case OFFSET:
-        return isSetOffset();
+      case LIMIT:
+        return isSetLimit();
+      case CURSOR:
+        return isSetCursor();
       }
       throw new java.lang.IllegalStateException();
     }
@@ -23092,21 +23098,21 @@ public class MiotoCarService {
           return false;
       }
 
-      boolean this_present_count = true;
-      boolean that_present_count = true;
-      if (this_present_count || that_present_count) {
-        if (!(this_present_count && that_present_count))
+      boolean this_present_limit = true;
+      boolean that_present_limit = true;
+      if (this_present_limit || that_present_limit) {
+        if (!(this_present_limit && that_present_limit))
           return false;
-        if (this.count != that.count)
+        if (this.limit != that.limit)
           return false;
       }
 
-      boolean this_present_offset = true;
-      boolean that_present_offset = true;
-      if (this_present_offset || that_present_offset) {
-        if (!(this_present_offset && that_present_offset))
+      boolean this_present_cursor = true;
+      boolean that_present_cursor = true;
+      if (this_present_cursor || that_present_cursor) {
+        if (!(this_present_cursor && that_present_cursor))
           return false;
-        if (this.offset != that.offset)
+        if (this.cursor != that.cursor)
           return false;
       }
 
@@ -23125,9 +23131,9 @@ public class MiotoCarService {
       if (isSetProvinceName())
         hashCode = hashCode * 8191 + provinceName.hashCode();
 
-      hashCode = hashCode * 8191 + count;
+      hashCode = hashCode * 8191 + limit;
 
-      hashCode = hashCode * 8191 + offset;
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(cursor);
 
       return hashCode;
     }
@@ -23160,22 +23166,22 @@ public class MiotoCarService {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetCount()).compareTo(other.isSetCount());
+      lastComparison = java.lang.Boolean.valueOf(isSetLimit()).compareTo(other.isSetLimit());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetCount()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.count, other.count);
+      if (isSetLimit()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.limit, other.limit);
         if (lastComparison != 0) {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetOffset()).compareTo(other.isSetOffset());
+      lastComparison = java.lang.Boolean.valueOf(isSetCursor()).compareTo(other.isSetCursor());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetOffset()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.offset, other.offset);
+      if (isSetCursor()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.cursor, other.cursor);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -23217,12 +23223,12 @@ public class MiotoCarService {
       }
       first = false;
       if (!first) sb.append(", ");
-      sb.append("count:");
-      sb.append(this.count);
+      sb.append("limit:");
+      sb.append(this.limit);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("offset:");
-      sb.append(this.offset);
+      sb.append("cursor:");
+      sb.append(this.cursor);
       first = false;
       sb.append(")");
       return sb.toString();
@@ -23233,8 +23239,6 @@ public class MiotoCarService {
       if (handle == null) {
         throw new org.apache.thrift.protocol.TProtocolException("Required field 'handle' was not present! Struct: " + toString());
       }
-      // alas, we cannot check 'count' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'offset' because it's a primitive and you chose the non-beans generator.
       // check for sub-struct validity
       if (handle != null) {
         handle.validate();
@@ -23294,18 +23298,18 @@ public class MiotoCarService {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 3: // COUNT
+            case 3: // LIMIT
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.count = iprot.readI32();
-                struct.setCountIsSet(true);
+                struct.limit = iprot.readI32();
+                struct.setLimitIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 4: // OFFSET
-              if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.offset = iprot.readI32();
-                struct.setOffsetIsSet(true);
+            case 4: // CURSOR
+              if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+                struct.cursor = iprot.readI64();
+                struct.setCursorIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -23318,12 +23322,6 @@ public class MiotoCarService {
         iprot.readStructEnd();
 
         // check for required fields of primitive type, which can't be checked in the validate method
-        if (!struct.isSetCount()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'count' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetOffset()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'offset' was not found in serialized data! Struct: " + toString());
-        }
         struct.validate();
       }
 
@@ -23341,11 +23339,11 @@ public class MiotoCarService {
           oprot.writeString(struct.provinceName);
           oprot.writeFieldEnd();
         }
-        oprot.writeFieldBegin(COUNT_FIELD_DESC);
-        oprot.writeI32(struct.count);
+        oprot.writeFieldBegin(LIMIT_FIELD_DESC);
+        oprot.writeI32(struct.limit);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(OFFSET_FIELD_DESC);
-        oprot.writeI32(struct.offset);
+        oprot.writeFieldBegin(CURSOR_FIELD_DESC);
+        oprot.writeI64(struct.cursor);
         oprot.writeFieldEnd();
         oprot.writeFieldStop();
         oprot.writeStructEnd();
@@ -23365,15 +23363,25 @@ public class MiotoCarService {
       public void write(org.apache.thrift.protocol.TProtocol prot, getProvince_args struct) throws org.apache.thrift.TException {
         org.apache.thrift.protocol.TTupleProtocol oprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
         struct.handle.write(oprot);
-        oprot.writeI32(struct.count);
-        oprot.writeI32(struct.offset);
         java.util.BitSet optionals = new java.util.BitSet();
         if (struct.isSetProvinceName()) {
           optionals.set(0);
         }
-        oprot.writeBitSet(optionals, 1);
+        if (struct.isSetLimit()) {
+          optionals.set(1);
+        }
+        if (struct.isSetCursor()) {
+          optionals.set(2);
+        }
+        oprot.writeBitSet(optionals, 3);
         if (struct.isSetProvinceName()) {
           oprot.writeString(struct.provinceName);
+        }
+        if (struct.isSetLimit()) {
+          oprot.writeI32(struct.limit);
+        }
+        if (struct.isSetCursor()) {
+          oprot.writeI64(struct.cursor);
         }
       }
 
@@ -23383,14 +23391,18 @@ public class MiotoCarService {
         struct.handle = new thrift.OpHandle();
         struct.handle.read(iprot);
         struct.setHandleIsSet(true);
-        struct.count = iprot.readI32();
-        struct.setCountIsSet(true);
-        struct.offset = iprot.readI32();
-        struct.setOffsetIsSet(true);
-        java.util.BitSet incoming = iprot.readBitSet(1);
+        java.util.BitSet incoming = iprot.readBitSet(3);
         if (incoming.get(0)) {
           struct.provinceName = iprot.readString();
           struct.setProvinceNameIsSet(true);
+        }
+        if (incoming.get(1)) {
+          struct.limit = iprot.readI32();
+          struct.setLimitIsSet(true);
+        }
+        if (incoming.get(2)) {
+          struct.cursor = iprot.readI64();
+          struct.setCursorIsSet(true);
         }
       }
     }
@@ -27131,23 +27143,23 @@ public class MiotoCarService {
 
     private static final org.apache.thrift.protocol.TField HANDLE_FIELD_DESC = new org.apache.thrift.protocol.TField("handle", org.apache.thrift.protocol.TType.STRUCT, (short)1);
     private static final org.apache.thrift.protocol.TField PROVINCE_ID_FIELD_DESC = new org.apache.thrift.protocol.TField("provinceId", org.apache.thrift.protocol.TType.I32, (short)2);
-    private static final org.apache.thrift.protocol.TField COUNT_FIELD_DESC = new org.apache.thrift.protocol.TField("count", org.apache.thrift.protocol.TType.I32, (short)3);
-    private static final org.apache.thrift.protocol.TField OFFSET_FIELD_DESC = new org.apache.thrift.protocol.TField("offset", org.apache.thrift.protocol.TType.I32, (short)4);
+    private static final org.apache.thrift.protocol.TField LIMIT_FIELD_DESC = new org.apache.thrift.protocol.TField("limit", org.apache.thrift.protocol.TType.I32, (short)3);
+    private static final org.apache.thrift.protocol.TField CURSOR_FIELD_DESC = new org.apache.thrift.protocol.TField("cursor", org.apache.thrift.protocol.TType.I64, (short)4);
 
     private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new getDistrict_argsStandardSchemeFactory();
     private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getDistrict_argsTupleSchemeFactory();
 
     public @org.apache.thrift.annotation.Nullable thrift.OpHandle handle; // required
     public int provinceId; // required
-    public int count; // required
-    public int offset; // required
+    public int limit; // required
+    public long cursor; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       HANDLE((short)1, "handle"),
       PROVINCE_ID((short)2, "provinceId"),
-      COUNT((short)3, "count"),
-      OFFSET((short)4, "offset");
+      LIMIT((short)3, "limit"),
+      CURSOR((short)4, "cursor");
 
       private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -27167,10 +27179,10 @@ public class MiotoCarService {
             return HANDLE;
           case 2: // PROVINCE_ID
             return PROVINCE_ID;
-          case 3: // COUNT
-            return COUNT;
-          case 4: // OFFSET
-            return OFFSET;
+          case 3: // LIMIT
+            return LIMIT;
+          case 4: // CURSOR
+            return CURSOR;
           default:
             return null;
         }
@@ -27213,8 +27225,8 @@ public class MiotoCarService {
 
     // isset id assignments
     private static final int __PROVINCEID_ISSET_ID = 0;
-    private static final int __COUNT_ISSET_ID = 1;
-    private static final int __OFFSET_ISSET_ID = 2;
+    private static final int __LIMIT_ISSET_ID = 1;
+    private static final int __CURSOR_ISSET_ID = 2;
     private byte __isset_bitfield = 0;
     public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
@@ -27223,10 +27235,10 @@ public class MiotoCarService {
           new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, thrift.OpHandle.class)));
       tmpMap.put(_Fields.PROVINCE_ID, new org.apache.thrift.meta_data.FieldMetaData("provinceId", org.apache.thrift.TFieldRequirementType.REQUIRED, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.COUNT, new org.apache.thrift.meta_data.FieldMetaData("count", org.apache.thrift.TFieldRequirementType.REQUIRED, 
+      tmpMap.put(_Fields.LIMIT, new org.apache.thrift.meta_data.FieldMetaData("limit", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.OFFSET, new org.apache.thrift.meta_data.FieldMetaData("offset", org.apache.thrift.TFieldRequirementType.REQUIRED, 
-          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
+      tmpMap.put(_Fields.CURSOR, new org.apache.thrift.meta_data.FieldMetaData("cursor", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
       metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
       org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getDistrict_args.class, metaDataMap);
     }
@@ -27237,17 +27249,17 @@ public class MiotoCarService {
     public getDistrict_args(
       thrift.OpHandle handle,
       int provinceId,
-      int count,
-      int offset)
+      int limit,
+      long cursor)
     {
       this();
       this.handle = handle;
       this.provinceId = provinceId;
       setProvinceIdIsSet(true);
-      this.count = count;
-      setCountIsSet(true);
-      this.offset = offset;
-      setOffsetIsSet(true);
+      this.limit = limit;
+      setLimitIsSet(true);
+      this.cursor = cursor;
+      setCursorIsSet(true);
     }
 
     /**
@@ -27259,8 +27271,8 @@ public class MiotoCarService {
         this.handle = new thrift.OpHandle(other.handle);
       }
       this.provinceId = other.provinceId;
-      this.count = other.count;
-      this.offset = other.offset;
+      this.limit = other.limit;
+      this.cursor = other.cursor;
     }
 
     public getDistrict_args deepCopy() {
@@ -27272,10 +27284,10 @@ public class MiotoCarService {
       this.handle = null;
       setProvinceIdIsSet(false);
       this.provinceId = 0;
-      setCountIsSet(false);
-      this.count = 0;
-      setOffsetIsSet(false);
-      this.offset = 0;
+      setLimitIsSet(false);
+      this.limit = 0;
+      setCursorIsSet(false);
+      this.cursor = 0;
     }
 
     @org.apache.thrift.annotation.Nullable
@@ -27326,50 +27338,50 @@ public class MiotoCarService {
       __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __PROVINCEID_ISSET_ID, value);
     }
 
-    public int getCount() {
-      return this.count;
+    public int getLimit() {
+      return this.limit;
     }
 
-    public getDistrict_args setCount(int count) {
-      this.count = count;
-      setCountIsSet(true);
+    public getDistrict_args setLimit(int limit) {
+      this.limit = limit;
+      setLimitIsSet(true);
       return this;
     }
 
-    public void unsetCount() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNT_ISSET_ID);
+    public void unsetLimit() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    /** Returns true if field count is set (has been assigned a value) and false otherwise */
-    public boolean isSetCount() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNT_ISSET_ID);
+    /** Returns true if field limit is set (has been assigned a value) and false otherwise */
+    public boolean isSetLimit() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    public void setCountIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __COUNT_ISSET_ID, value);
+    public void setLimitIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __LIMIT_ISSET_ID, value);
     }
 
-    public int getOffset() {
-      return this.offset;
+    public long getCursor() {
+      return this.cursor;
     }
 
-    public getDistrict_args setOffset(int offset) {
-      this.offset = offset;
-      setOffsetIsSet(true);
+    public getDistrict_args setCursor(long cursor) {
+      this.cursor = cursor;
+      setCursorIsSet(true);
       return this;
     }
 
-    public void unsetOffset() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    public void unsetCursor() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    /** Returns true if field offset is set (has been assigned a value) and false otherwise */
-    public boolean isSetOffset() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    /** Returns true if field cursor is set (has been assigned a value) and false otherwise */
+    public boolean isSetCursor() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    public void setOffsetIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __OFFSET_ISSET_ID, value);
+    public void setCursorIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __CURSOR_ISSET_ID, value);
     }
 
     public void setFieldValue(_Fields field, @org.apache.thrift.annotation.Nullable java.lang.Object value) {
@@ -27390,19 +27402,19 @@ public class MiotoCarService {
         }
         break;
 
-      case COUNT:
+      case LIMIT:
         if (value == null) {
-          unsetCount();
+          unsetLimit();
         } else {
-          setCount((java.lang.Integer)value);
+          setLimit((java.lang.Integer)value);
         }
         break;
 
-      case OFFSET:
+      case CURSOR:
         if (value == null) {
-          unsetOffset();
+          unsetCursor();
         } else {
-          setOffset((java.lang.Integer)value);
+          setCursor((java.lang.Long)value);
         }
         break;
 
@@ -27418,11 +27430,11 @@ public class MiotoCarService {
       case PROVINCE_ID:
         return getProvinceId();
 
-      case COUNT:
-        return getCount();
+      case LIMIT:
+        return getLimit();
 
-      case OFFSET:
-        return getOffset();
+      case CURSOR:
+        return getCursor();
 
       }
       throw new java.lang.IllegalStateException();
@@ -27439,10 +27451,10 @@ public class MiotoCarService {
         return isSetHandle();
       case PROVINCE_ID:
         return isSetProvinceId();
-      case COUNT:
-        return isSetCount();
-      case OFFSET:
-        return isSetOffset();
+      case LIMIT:
+        return isSetLimit();
+      case CURSOR:
+        return isSetCursor();
       }
       throw new java.lang.IllegalStateException();
     }
@@ -27480,21 +27492,21 @@ public class MiotoCarService {
           return false;
       }
 
-      boolean this_present_count = true;
-      boolean that_present_count = true;
-      if (this_present_count || that_present_count) {
-        if (!(this_present_count && that_present_count))
+      boolean this_present_limit = true;
+      boolean that_present_limit = true;
+      if (this_present_limit || that_present_limit) {
+        if (!(this_present_limit && that_present_limit))
           return false;
-        if (this.count != that.count)
+        if (this.limit != that.limit)
           return false;
       }
 
-      boolean this_present_offset = true;
-      boolean that_present_offset = true;
-      if (this_present_offset || that_present_offset) {
-        if (!(this_present_offset && that_present_offset))
+      boolean this_present_cursor = true;
+      boolean that_present_cursor = true;
+      if (this_present_cursor || that_present_cursor) {
+        if (!(this_present_cursor && that_present_cursor))
           return false;
-        if (this.offset != that.offset)
+        if (this.cursor != that.cursor)
           return false;
       }
 
@@ -27511,9 +27523,9 @@ public class MiotoCarService {
 
       hashCode = hashCode * 8191 + provinceId;
 
-      hashCode = hashCode * 8191 + count;
+      hashCode = hashCode * 8191 + limit;
 
-      hashCode = hashCode * 8191 + offset;
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(cursor);
 
       return hashCode;
     }
@@ -27546,22 +27558,22 @@ public class MiotoCarService {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetCount()).compareTo(other.isSetCount());
+      lastComparison = java.lang.Boolean.valueOf(isSetLimit()).compareTo(other.isSetLimit());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetCount()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.count, other.count);
+      if (isSetLimit()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.limit, other.limit);
         if (lastComparison != 0) {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetOffset()).compareTo(other.isSetOffset());
+      lastComparison = java.lang.Boolean.valueOf(isSetCursor()).compareTo(other.isSetCursor());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetOffset()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.offset, other.offset);
+      if (isSetCursor()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.cursor, other.cursor);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -27599,12 +27611,12 @@ public class MiotoCarService {
       sb.append(this.provinceId);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("count:");
-      sb.append(this.count);
+      sb.append("limit:");
+      sb.append(this.limit);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("offset:");
-      sb.append(this.offset);
+      sb.append("cursor:");
+      sb.append(this.cursor);
       first = false;
       sb.append(")");
       return sb.toString();
@@ -27616,8 +27628,6 @@ public class MiotoCarService {
         throw new org.apache.thrift.protocol.TProtocolException("Required field 'handle' was not present! Struct: " + toString());
       }
       // alas, we cannot check 'provinceId' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'count' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'offset' because it's a primitive and you chose the non-beans generator.
       // check for sub-struct validity
       if (handle != null) {
         handle.validate();
@@ -27677,18 +27687,18 @@ public class MiotoCarService {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 3: // COUNT
+            case 3: // LIMIT
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.count = iprot.readI32();
-                struct.setCountIsSet(true);
+                struct.limit = iprot.readI32();
+                struct.setLimitIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 4: // OFFSET
-              if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.offset = iprot.readI32();
-                struct.setOffsetIsSet(true);
+            case 4: // CURSOR
+              if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+                struct.cursor = iprot.readI64();
+                struct.setCursorIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -27703,12 +27713,6 @@ public class MiotoCarService {
         // check for required fields of primitive type, which can't be checked in the validate method
         if (!struct.isSetProvinceId()) {
           throw new org.apache.thrift.protocol.TProtocolException("Required field 'provinceId' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetCount()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'count' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetOffset()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'offset' was not found in serialized data! Struct: " + toString());
         }
         struct.validate();
       }
@@ -27725,11 +27729,11 @@ public class MiotoCarService {
         oprot.writeFieldBegin(PROVINCE_ID_FIELD_DESC);
         oprot.writeI32(struct.provinceId);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(COUNT_FIELD_DESC);
-        oprot.writeI32(struct.count);
+        oprot.writeFieldBegin(LIMIT_FIELD_DESC);
+        oprot.writeI32(struct.limit);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(OFFSET_FIELD_DESC);
-        oprot.writeI32(struct.offset);
+        oprot.writeFieldBegin(CURSOR_FIELD_DESC);
+        oprot.writeI64(struct.cursor);
         oprot.writeFieldEnd();
         oprot.writeFieldStop();
         oprot.writeStructEnd();
@@ -27750,8 +27754,20 @@ public class MiotoCarService {
         org.apache.thrift.protocol.TTupleProtocol oprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
         struct.handle.write(oprot);
         oprot.writeI32(struct.provinceId);
-        oprot.writeI32(struct.count);
-        oprot.writeI32(struct.offset);
+        java.util.BitSet optionals = new java.util.BitSet();
+        if (struct.isSetLimit()) {
+          optionals.set(0);
+        }
+        if (struct.isSetCursor()) {
+          optionals.set(1);
+        }
+        oprot.writeBitSet(optionals, 2);
+        if (struct.isSetLimit()) {
+          oprot.writeI32(struct.limit);
+        }
+        if (struct.isSetCursor()) {
+          oprot.writeI64(struct.cursor);
+        }
       }
 
       @Override
@@ -27762,10 +27778,15 @@ public class MiotoCarService {
         struct.setHandleIsSet(true);
         struct.provinceId = iprot.readI32();
         struct.setProvinceIdIsSet(true);
-        struct.count = iprot.readI32();
-        struct.setCountIsSet(true);
-        struct.offset = iprot.readI32();
-        struct.setOffsetIsSet(true);
+        java.util.BitSet incoming = iprot.readBitSet(2);
+        if (incoming.get(0)) {
+          struct.limit = iprot.readI32();
+          struct.setLimitIsSet(true);
+        }
+        if (incoming.get(1)) {
+          struct.cursor = iprot.readI64();
+          struct.setCursorIsSet(true);
+        }
       }
     }
 
@@ -35926,23 +35947,23 @@ public class MiotoCarService {
 
     private static final org.apache.thrift.protocol.TField HANDLE_FIELD_DESC = new org.apache.thrift.protocol.TField("handle", org.apache.thrift.protocol.TType.STRUCT, (short)1);
     private static final org.apache.thrift.protocol.TField NAME_FEATURE_FIELD_DESC = new org.apache.thrift.protocol.TField("nameFeature", org.apache.thrift.protocol.TType.STRING, (short)2);
-    private static final org.apache.thrift.protocol.TField COUNT_FIELD_DESC = new org.apache.thrift.protocol.TField("count", org.apache.thrift.protocol.TType.I32, (short)3);
-    private static final org.apache.thrift.protocol.TField OFFSET_FIELD_DESC = new org.apache.thrift.protocol.TField("offset", org.apache.thrift.protocol.TType.I32, (short)4);
+    private static final org.apache.thrift.protocol.TField LIMIT_FIELD_DESC = new org.apache.thrift.protocol.TField("limit", org.apache.thrift.protocol.TType.I32, (short)3);
+    private static final org.apache.thrift.protocol.TField CURSOR_FIELD_DESC = new org.apache.thrift.protocol.TField("cursor", org.apache.thrift.protocol.TType.I64, (short)4);
 
     private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new getFeature_argsStandardSchemeFactory();
     private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getFeature_argsTupleSchemeFactory();
 
     public @org.apache.thrift.annotation.Nullable thrift.OpHandle handle; // required
     public @org.apache.thrift.annotation.Nullable java.lang.String nameFeature; // required
-    public int count; // required
-    public int offset; // required
+    public int limit; // required
+    public long cursor; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       HANDLE((short)1, "handle"),
       NAME_FEATURE((short)2, "nameFeature"),
-      COUNT((short)3, "count"),
-      OFFSET((short)4, "offset");
+      LIMIT((short)3, "limit"),
+      CURSOR((short)4, "cursor");
 
       private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -35962,10 +35983,10 @@ public class MiotoCarService {
             return HANDLE;
           case 2: // NAME_FEATURE
             return NAME_FEATURE;
-          case 3: // COUNT
-            return COUNT;
-          case 4: // OFFSET
-            return OFFSET;
+          case 3: // LIMIT
+            return LIMIT;
+          case 4: // CURSOR
+            return CURSOR;
           default:
             return null;
         }
@@ -36007,8 +36028,8 @@ public class MiotoCarService {
     }
 
     // isset id assignments
-    private static final int __COUNT_ISSET_ID = 0;
-    private static final int __OFFSET_ISSET_ID = 1;
+    private static final int __LIMIT_ISSET_ID = 0;
+    private static final int __CURSOR_ISSET_ID = 1;
     private byte __isset_bitfield = 0;
     public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
@@ -36017,10 +36038,10 @@ public class MiotoCarService {
           new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, thrift.OpHandle.class)));
       tmpMap.put(_Fields.NAME_FEATURE, new org.apache.thrift.meta_data.FieldMetaData("nameFeature", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-      tmpMap.put(_Fields.COUNT, new org.apache.thrift.meta_data.FieldMetaData("count", org.apache.thrift.TFieldRequirementType.REQUIRED, 
+      tmpMap.put(_Fields.LIMIT, new org.apache.thrift.meta_data.FieldMetaData("limit", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.OFFSET, new org.apache.thrift.meta_data.FieldMetaData("offset", org.apache.thrift.TFieldRequirementType.REQUIRED, 
-          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
+      tmpMap.put(_Fields.CURSOR, new org.apache.thrift.meta_data.FieldMetaData("cursor", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
       metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
       org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getFeature_args.class, metaDataMap);
     }
@@ -36031,16 +36052,16 @@ public class MiotoCarService {
     public getFeature_args(
       thrift.OpHandle handle,
       java.lang.String nameFeature,
-      int count,
-      int offset)
+      int limit,
+      long cursor)
     {
       this();
       this.handle = handle;
       this.nameFeature = nameFeature;
-      this.count = count;
-      setCountIsSet(true);
-      this.offset = offset;
-      setOffsetIsSet(true);
+      this.limit = limit;
+      setLimitIsSet(true);
+      this.cursor = cursor;
+      setCursorIsSet(true);
     }
 
     /**
@@ -36054,8 +36075,8 @@ public class MiotoCarService {
       if (other.isSetNameFeature()) {
         this.nameFeature = other.nameFeature;
       }
-      this.count = other.count;
-      this.offset = other.offset;
+      this.limit = other.limit;
+      this.cursor = other.cursor;
     }
 
     public getFeature_args deepCopy() {
@@ -36066,10 +36087,10 @@ public class MiotoCarService {
     public void clear() {
       this.handle = null;
       this.nameFeature = null;
-      setCountIsSet(false);
-      this.count = 0;
-      setOffsetIsSet(false);
-      this.offset = 0;
+      setLimitIsSet(false);
+      this.limit = 0;
+      setCursorIsSet(false);
+      this.cursor = 0;
     }
 
     @org.apache.thrift.annotation.Nullable
@@ -36122,50 +36143,50 @@ public class MiotoCarService {
       }
     }
 
-    public int getCount() {
-      return this.count;
+    public int getLimit() {
+      return this.limit;
     }
 
-    public getFeature_args setCount(int count) {
-      this.count = count;
-      setCountIsSet(true);
+    public getFeature_args setLimit(int limit) {
+      this.limit = limit;
+      setLimitIsSet(true);
       return this;
     }
 
-    public void unsetCount() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNT_ISSET_ID);
+    public void unsetLimit() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    /** Returns true if field count is set (has been assigned a value) and false otherwise */
-    public boolean isSetCount() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNT_ISSET_ID);
+    /** Returns true if field limit is set (has been assigned a value) and false otherwise */
+    public boolean isSetLimit() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    public void setCountIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __COUNT_ISSET_ID, value);
+    public void setLimitIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __LIMIT_ISSET_ID, value);
     }
 
-    public int getOffset() {
-      return this.offset;
+    public long getCursor() {
+      return this.cursor;
     }
 
-    public getFeature_args setOffset(int offset) {
-      this.offset = offset;
-      setOffsetIsSet(true);
+    public getFeature_args setCursor(long cursor) {
+      this.cursor = cursor;
+      setCursorIsSet(true);
       return this;
     }
 
-    public void unsetOffset() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    public void unsetCursor() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    /** Returns true if field offset is set (has been assigned a value) and false otherwise */
-    public boolean isSetOffset() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    /** Returns true if field cursor is set (has been assigned a value) and false otherwise */
+    public boolean isSetCursor() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    public void setOffsetIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __OFFSET_ISSET_ID, value);
+    public void setCursorIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __CURSOR_ISSET_ID, value);
     }
 
     public void setFieldValue(_Fields field, @org.apache.thrift.annotation.Nullable java.lang.Object value) {
@@ -36186,19 +36207,19 @@ public class MiotoCarService {
         }
         break;
 
-      case COUNT:
+      case LIMIT:
         if (value == null) {
-          unsetCount();
+          unsetLimit();
         } else {
-          setCount((java.lang.Integer)value);
+          setLimit((java.lang.Integer)value);
         }
         break;
 
-      case OFFSET:
+      case CURSOR:
         if (value == null) {
-          unsetOffset();
+          unsetCursor();
         } else {
-          setOffset((java.lang.Integer)value);
+          setCursor((java.lang.Long)value);
         }
         break;
 
@@ -36214,11 +36235,11 @@ public class MiotoCarService {
       case NAME_FEATURE:
         return getNameFeature();
 
-      case COUNT:
-        return getCount();
+      case LIMIT:
+        return getLimit();
 
-      case OFFSET:
-        return getOffset();
+      case CURSOR:
+        return getCursor();
 
       }
       throw new java.lang.IllegalStateException();
@@ -36235,10 +36256,10 @@ public class MiotoCarService {
         return isSetHandle();
       case NAME_FEATURE:
         return isSetNameFeature();
-      case COUNT:
-        return isSetCount();
-      case OFFSET:
-        return isSetOffset();
+      case LIMIT:
+        return isSetLimit();
+      case CURSOR:
+        return isSetCursor();
       }
       throw new java.lang.IllegalStateException();
     }
@@ -36276,21 +36297,21 @@ public class MiotoCarService {
           return false;
       }
 
-      boolean this_present_count = true;
-      boolean that_present_count = true;
-      if (this_present_count || that_present_count) {
-        if (!(this_present_count && that_present_count))
+      boolean this_present_limit = true;
+      boolean that_present_limit = true;
+      if (this_present_limit || that_present_limit) {
+        if (!(this_present_limit && that_present_limit))
           return false;
-        if (this.count != that.count)
+        if (this.limit != that.limit)
           return false;
       }
 
-      boolean this_present_offset = true;
-      boolean that_present_offset = true;
-      if (this_present_offset || that_present_offset) {
-        if (!(this_present_offset && that_present_offset))
+      boolean this_present_cursor = true;
+      boolean that_present_cursor = true;
+      if (this_present_cursor || that_present_cursor) {
+        if (!(this_present_cursor && that_present_cursor))
           return false;
-        if (this.offset != that.offset)
+        if (this.cursor != that.cursor)
           return false;
       }
 
@@ -36309,9 +36330,9 @@ public class MiotoCarService {
       if (isSetNameFeature())
         hashCode = hashCode * 8191 + nameFeature.hashCode();
 
-      hashCode = hashCode * 8191 + count;
+      hashCode = hashCode * 8191 + limit;
 
-      hashCode = hashCode * 8191 + offset;
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(cursor);
 
       return hashCode;
     }
@@ -36344,22 +36365,22 @@ public class MiotoCarService {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetCount()).compareTo(other.isSetCount());
+      lastComparison = java.lang.Boolean.valueOf(isSetLimit()).compareTo(other.isSetLimit());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetCount()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.count, other.count);
+      if (isSetLimit()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.limit, other.limit);
         if (lastComparison != 0) {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetOffset()).compareTo(other.isSetOffset());
+      lastComparison = java.lang.Boolean.valueOf(isSetCursor()).compareTo(other.isSetCursor());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetOffset()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.offset, other.offset);
+      if (isSetCursor()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.cursor, other.cursor);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -36401,12 +36422,12 @@ public class MiotoCarService {
       }
       first = false;
       if (!first) sb.append(", ");
-      sb.append("count:");
-      sb.append(this.count);
+      sb.append("limit:");
+      sb.append(this.limit);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("offset:");
-      sb.append(this.offset);
+      sb.append("cursor:");
+      sb.append(this.cursor);
       first = false;
       sb.append(")");
       return sb.toString();
@@ -36417,8 +36438,6 @@ public class MiotoCarService {
       if (handle == null) {
         throw new org.apache.thrift.protocol.TProtocolException("Required field 'handle' was not present! Struct: " + toString());
       }
-      // alas, we cannot check 'count' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'offset' because it's a primitive and you chose the non-beans generator.
       // check for sub-struct validity
       if (handle != null) {
         handle.validate();
@@ -36478,18 +36497,18 @@ public class MiotoCarService {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 3: // COUNT
+            case 3: // LIMIT
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.count = iprot.readI32();
-                struct.setCountIsSet(true);
+                struct.limit = iprot.readI32();
+                struct.setLimitIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 4: // OFFSET
-              if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.offset = iprot.readI32();
-                struct.setOffsetIsSet(true);
+            case 4: // CURSOR
+              if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+                struct.cursor = iprot.readI64();
+                struct.setCursorIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -36502,12 +36521,6 @@ public class MiotoCarService {
         iprot.readStructEnd();
 
         // check for required fields of primitive type, which can't be checked in the validate method
-        if (!struct.isSetCount()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'count' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetOffset()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'offset' was not found in serialized data! Struct: " + toString());
-        }
         struct.validate();
       }
 
@@ -36525,11 +36538,11 @@ public class MiotoCarService {
           oprot.writeString(struct.nameFeature);
           oprot.writeFieldEnd();
         }
-        oprot.writeFieldBegin(COUNT_FIELD_DESC);
-        oprot.writeI32(struct.count);
+        oprot.writeFieldBegin(LIMIT_FIELD_DESC);
+        oprot.writeI32(struct.limit);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(OFFSET_FIELD_DESC);
-        oprot.writeI32(struct.offset);
+        oprot.writeFieldBegin(CURSOR_FIELD_DESC);
+        oprot.writeI64(struct.cursor);
         oprot.writeFieldEnd();
         oprot.writeFieldStop();
         oprot.writeStructEnd();
@@ -36549,15 +36562,25 @@ public class MiotoCarService {
       public void write(org.apache.thrift.protocol.TProtocol prot, getFeature_args struct) throws org.apache.thrift.TException {
         org.apache.thrift.protocol.TTupleProtocol oprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
         struct.handle.write(oprot);
-        oprot.writeI32(struct.count);
-        oprot.writeI32(struct.offset);
         java.util.BitSet optionals = new java.util.BitSet();
         if (struct.isSetNameFeature()) {
           optionals.set(0);
         }
-        oprot.writeBitSet(optionals, 1);
+        if (struct.isSetLimit()) {
+          optionals.set(1);
+        }
+        if (struct.isSetCursor()) {
+          optionals.set(2);
+        }
+        oprot.writeBitSet(optionals, 3);
         if (struct.isSetNameFeature()) {
           oprot.writeString(struct.nameFeature);
+        }
+        if (struct.isSetLimit()) {
+          oprot.writeI32(struct.limit);
+        }
+        if (struct.isSetCursor()) {
+          oprot.writeI64(struct.cursor);
         }
       }
 
@@ -36567,14 +36590,18 @@ public class MiotoCarService {
         struct.handle = new thrift.OpHandle();
         struct.handle.read(iprot);
         struct.setHandleIsSet(true);
-        struct.count = iprot.readI32();
-        struct.setCountIsSet(true);
-        struct.offset = iprot.readI32();
-        struct.setOffsetIsSet(true);
-        java.util.BitSet incoming = iprot.readBitSet(1);
+        java.util.BitSet incoming = iprot.readBitSet(3);
         if (incoming.get(0)) {
           struct.nameFeature = iprot.readString();
           struct.setNameFeatureIsSet(true);
+        }
+        if (incoming.get(1)) {
+          struct.limit = iprot.readI32();
+          struct.setLimitIsSet(true);
+        }
+        if (incoming.get(2)) {
+          struct.cursor = iprot.readI64();
+          struct.setCursorIsSet(true);
         }
       }
     }
@@ -40327,23 +40354,23 @@ public class MiotoCarService {
 
     private static final org.apache.thrift.protocol.TField HANDLE_FIELD_DESC = new org.apache.thrift.protocol.TField("handle", org.apache.thrift.protocol.TType.STRUCT, (short)1);
     private static final org.apache.thrift.protocol.TField RECEIVER_ID_FIELD_DESC = new org.apache.thrift.protocol.TField("receiverId", org.apache.thrift.protocol.TType.I32, (short)2);
-    private static final org.apache.thrift.protocol.TField COUNT_FIELD_DESC = new org.apache.thrift.protocol.TField("count", org.apache.thrift.protocol.TType.I32, (short)3);
-    private static final org.apache.thrift.protocol.TField OFFSET_FIELD_DESC = new org.apache.thrift.protocol.TField("offset", org.apache.thrift.protocol.TType.I32, (short)4);
+    private static final org.apache.thrift.protocol.TField LIMIT_FIELD_DESC = new org.apache.thrift.protocol.TField("limit", org.apache.thrift.protocol.TType.I32, (short)3);
+    private static final org.apache.thrift.protocol.TField CURSOR_FIELD_DESC = new org.apache.thrift.protocol.TField("cursor", org.apache.thrift.protocol.TType.I64, (short)4);
 
     private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new getFeedBack_argsStandardSchemeFactory();
     private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getFeedBack_argsTupleSchemeFactory();
 
     public @org.apache.thrift.annotation.Nullable thrift.OpHandle handle; // required
     public int receiverId; // required
-    public int count; // required
-    public int offset; // required
+    public int limit; // required
+    public long cursor; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       HANDLE((short)1, "handle"),
       RECEIVER_ID((short)2, "receiverId"),
-      COUNT((short)3, "count"),
-      OFFSET((short)4, "offset");
+      LIMIT((short)3, "limit"),
+      CURSOR((short)4, "cursor");
 
       private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -40363,10 +40390,10 @@ public class MiotoCarService {
             return HANDLE;
           case 2: // RECEIVER_ID
             return RECEIVER_ID;
-          case 3: // COUNT
-            return COUNT;
-          case 4: // OFFSET
-            return OFFSET;
+          case 3: // LIMIT
+            return LIMIT;
+          case 4: // CURSOR
+            return CURSOR;
           default:
             return null;
         }
@@ -40409,8 +40436,8 @@ public class MiotoCarService {
 
     // isset id assignments
     private static final int __RECEIVERID_ISSET_ID = 0;
-    private static final int __COUNT_ISSET_ID = 1;
-    private static final int __OFFSET_ISSET_ID = 2;
+    private static final int __LIMIT_ISSET_ID = 1;
+    private static final int __CURSOR_ISSET_ID = 2;
     private byte __isset_bitfield = 0;
     public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
@@ -40419,10 +40446,10 @@ public class MiotoCarService {
           new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, thrift.OpHandle.class)));
       tmpMap.put(_Fields.RECEIVER_ID, new org.apache.thrift.meta_data.FieldMetaData("receiverId", org.apache.thrift.TFieldRequirementType.REQUIRED, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.COUNT, new org.apache.thrift.meta_data.FieldMetaData("count", org.apache.thrift.TFieldRequirementType.REQUIRED, 
+      tmpMap.put(_Fields.LIMIT, new org.apache.thrift.meta_data.FieldMetaData("limit", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.OFFSET, new org.apache.thrift.meta_data.FieldMetaData("offset", org.apache.thrift.TFieldRequirementType.REQUIRED, 
-          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
+      tmpMap.put(_Fields.CURSOR, new org.apache.thrift.meta_data.FieldMetaData("cursor", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
       metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
       org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getFeedBack_args.class, metaDataMap);
     }
@@ -40433,17 +40460,17 @@ public class MiotoCarService {
     public getFeedBack_args(
       thrift.OpHandle handle,
       int receiverId,
-      int count,
-      int offset)
+      int limit,
+      long cursor)
     {
       this();
       this.handle = handle;
       this.receiverId = receiverId;
       setReceiverIdIsSet(true);
-      this.count = count;
-      setCountIsSet(true);
-      this.offset = offset;
-      setOffsetIsSet(true);
+      this.limit = limit;
+      setLimitIsSet(true);
+      this.cursor = cursor;
+      setCursorIsSet(true);
     }
 
     /**
@@ -40455,8 +40482,8 @@ public class MiotoCarService {
         this.handle = new thrift.OpHandle(other.handle);
       }
       this.receiverId = other.receiverId;
-      this.count = other.count;
-      this.offset = other.offset;
+      this.limit = other.limit;
+      this.cursor = other.cursor;
     }
 
     public getFeedBack_args deepCopy() {
@@ -40468,10 +40495,10 @@ public class MiotoCarService {
       this.handle = null;
       setReceiverIdIsSet(false);
       this.receiverId = 0;
-      setCountIsSet(false);
-      this.count = 0;
-      setOffsetIsSet(false);
-      this.offset = 0;
+      setLimitIsSet(false);
+      this.limit = 0;
+      setCursorIsSet(false);
+      this.cursor = 0;
     }
 
     @org.apache.thrift.annotation.Nullable
@@ -40522,50 +40549,50 @@ public class MiotoCarService {
       __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __RECEIVERID_ISSET_ID, value);
     }
 
-    public int getCount() {
-      return this.count;
+    public int getLimit() {
+      return this.limit;
     }
 
-    public getFeedBack_args setCount(int count) {
-      this.count = count;
-      setCountIsSet(true);
+    public getFeedBack_args setLimit(int limit) {
+      this.limit = limit;
+      setLimitIsSet(true);
       return this;
     }
 
-    public void unsetCount() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNT_ISSET_ID);
+    public void unsetLimit() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    /** Returns true if field count is set (has been assigned a value) and false otherwise */
-    public boolean isSetCount() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNT_ISSET_ID);
+    /** Returns true if field limit is set (has been assigned a value) and false otherwise */
+    public boolean isSetLimit() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    public void setCountIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __COUNT_ISSET_ID, value);
+    public void setLimitIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __LIMIT_ISSET_ID, value);
     }
 
-    public int getOffset() {
-      return this.offset;
+    public long getCursor() {
+      return this.cursor;
     }
 
-    public getFeedBack_args setOffset(int offset) {
-      this.offset = offset;
-      setOffsetIsSet(true);
+    public getFeedBack_args setCursor(long cursor) {
+      this.cursor = cursor;
+      setCursorIsSet(true);
       return this;
     }
 
-    public void unsetOffset() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    public void unsetCursor() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    /** Returns true if field offset is set (has been assigned a value) and false otherwise */
-    public boolean isSetOffset() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    /** Returns true if field cursor is set (has been assigned a value) and false otherwise */
+    public boolean isSetCursor() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    public void setOffsetIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __OFFSET_ISSET_ID, value);
+    public void setCursorIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __CURSOR_ISSET_ID, value);
     }
 
     public void setFieldValue(_Fields field, @org.apache.thrift.annotation.Nullable java.lang.Object value) {
@@ -40586,19 +40613,19 @@ public class MiotoCarService {
         }
         break;
 
-      case COUNT:
+      case LIMIT:
         if (value == null) {
-          unsetCount();
+          unsetLimit();
         } else {
-          setCount((java.lang.Integer)value);
+          setLimit((java.lang.Integer)value);
         }
         break;
 
-      case OFFSET:
+      case CURSOR:
         if (value == null) {
-          unsetOffset();
+          unsetCursor();
         } else {
-          setOffset((java.lang.Integer)value);
+          setCursor((java.lang.Long)value);
         }
         break;
 
@@ -40614,11 +40641,11 @@ public class MiotoCarService {
       case RECEIVER_ID:
         return getReceiverId();
 
-      case COUNT:
-        return getCount();
+      case LIMIT:
+        return getLimit();
 
-      case OFFSET:
-        return getOffset();
+      case CURSOR:
+        return getCursor();
 
       }
       throw new java.lang.IllegalStateException();
@@ -40635,10 +40662,10 @@ public class MiotoCarService {
         return isSetHandle();
       case RECEIVER_ID:
         return isSetReceiverId();
-      case COUNT:
-        return isSetCount();
-      case OFFSET:
-        return isSetOffset();
+      case LIMIT:
+        return isSetLimit();
+      case CURSOR:
+        return isSetCursor();
       }
       throw new java.lang.IllegalStateException();
     }
@@ -40676,21 +40703,21 @@ public class MiotoCarService {
           return false;
       }
 
-      boolean this_present_count = true;
-      boolean that_present_count = true;
-      if (this_present_count || that_present_count) {
-        if (!(this_present_count && that_present_count))
+      boolean this_present_limit = true;
+      boolean that_present_limit = true;
+      if (this_present_limit || that_present_limit) {
+        if (!(this_present_limit && that_present_limit))
           return false;
-        if (this.count != that.count)
+        if (this.limit != that.limit)
           return false;
       }
 
-      boolean this_present_offset = true;
-      boolean that_present_offset = true;
-      if (this_present_offset || that_present_offset) {
-        if (!(this_present_offset && that_present_offset))
+      boolean this_present_cursor = true;
+      boolean that_present_cursor = true;
+      if (this_present_cursor || that_present_cursor) {
+        if (!(this_present_cursor && that_present_cursor))
           return false;
-        if (this.offset != that.offset)
+        if (this.cursor != that.cursor)
           return false;
       }
 
@@ -40707,9 +40734,9 @@ public class MiotoCarService {
 
       hashCode = hashCode * 8191 + receiverId;
 
-      hashCode = hashCode * 8191 + count;
+      hashCode = hashCode * 8191 + limit;
 
-      hashCode = hashCode * 8191 + offset;
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(cursor);
 
       return hashCode;
     }
@@ -40742,22 +40769,22 @@ public class MiotoCarService {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetCount()).compareTo(other.isSetCount());
+      lastComparison = java.lang.Boolean.valueOf(isSetLimit()).compareTo(other.isSetLimit());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetCount()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.count, other.count);
+      if (isSetLimit()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.limit, other.limit);
         if (lastComparison != 0) {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetOffset()).compareTo(other.isSetOffset());
+      lastComparison = java.lang.Boolean.valueOf(isSetCursor()).compareTo(other.isSetCursor());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetOffset()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.offset, other.offset);
+      if (isSetCursor()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.cursor, other.cursor);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -40795,12 +40822,12 @@ public class MiotoCarService {
       sb.append(this.receiverId);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("count:");
-      sb.append(this.count);
+      sb.append("limit:");
+      sb.append(this.limit);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("offset:");
-      sb.append(this.offset);
+      sb.append("cursor:");
+      sb.append(this.cursor);
       first = false;
       sb.append(")");
       return sb.toString();
@@ -40812,8 +40839,6 @@ public class MiotoCarService {
         throw new org.apache.thrift.protocol.TProtocolException("Required field 'handle' was not present! Struct: " + toString());
       }
       // alas, we cannot check 'receiverId' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'count' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'offset' because it's a primitive and you chose the non-beans generator.
       // check for sub-struct validity
       if (handle != null) {
         handle.validate();
@@ -40873,18 +40898,18 @@ public class MiotoCarService {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 3: // COUNT
+            case 3: // LIMIT
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.count = iprot.readI32();
-                struct.setCountIsSet(true);
+                struct.limit = iprot.readI32();
+                struct.setLimitIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 4: // OFFSET
-              if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.offset = iprot.readI32();
-                struct.setOffsetIsSet(true);
+            case 4: // CURSOR
+              if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+                struct.cursor = iprot.readI64();
+                struct.setCursorIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -40899,12 +40924,6 @@ public class MiotoCarService {
         // check for required fields of primitive type, which can't be checked in the validate method
         if (!struct.isSetReceiverId()) {
           throw new org.apache.thrift.protocol.TProtocolException("Required field 'receiverId' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetCount()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'count' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetOffset()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'offset' was not found in serialized data! Struct: " + toString());
         }
         struct.validate();
       }
@@ -40921,11 +40940,11 @@ public class MiotoCarService {
         oprot.writeFieldBegin(RECEIVER_ID_FIELD_DESC);
         oprot.writeI32(struct.receiverId);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(COUNT_FIELD_DESC);
-        oprot.writeI32(struct.count);
+        oprot.writeFieldBegin(LIMIT_FIELD_DESC);
+        oprot.writeI32(struct.limit);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(OFFSET_FIELD_DESC);
-        oprot.writeI32(struct.offset);
+        oprot.writeFieldBegin(CURSOR_FIELD_DESC);
+        oprot.writeI64(struct.cursor);
         oprot.writeFieldEnd();
         oprot.writeFieldStop();
         oprot.writeStructEnd();
@@ -40946,8 +40965,20 @@ public class MiotoCarService {
         org.apache.thrift.protocol.TTupleProtocol oprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
         struct.handle.write(oprot);
         oprot.writeI32(struct.receiverId);
-        oprot.writeI32(struct.count);
-        oprot.writeI32(struct.offset);
+        java.util.BitSet optionals = new java.util.BitSet();
+        if (struct.isSetLimit()) {
+          optionals.set(0);
+        }
+        if (struct.isSetCursor()) {
+          optionals.set(1);
+        }
+        oprot.writeBitSet(optionals, 2);
+        if (struct.isSetLimit()) {
+          oprot.writeI32(struct.limit);
+        }
+        if (struct.isSetCursor()) {
+          oprot.writeI64(struct.cursor);
+        }
       }
 
       @Override
@@ -40958,10 +40989,15 @@ public class MiotoCarService {
         struct.setHandleIsSet(true);
         struct.receiverId = iprot.readI32();
         struct.setReceiverIdIsSet(true);
-        struct.count = iprot.readI32();
-        struct.setCountIsSet(true);
-        struct.offset = iprot.readI32();
-        struct.setOffsetIsSet(true);
+        java.util.BitSet incoming = iprot.readBitSet(2);
+        if (incoming.get(0)) {
+          struct.limit = iprot.readI32();
+          struct.setLimitIsSet(true);
+        }
+        if (incoming.get(1)) {
+          struct.cursor = iprot.readI64();
+          struct.setCursorIsSet(true);
+        }
       }
     }
 
@@ -43867,8 +43903,8 @@ public class MiotoCarService {
 
     private static final org.apache.thrift.protocol.TField HANDLE_FIELD_DESC = new org.apache.thrift.protocol.TField("handle", org.apache.thrift.protocol.TType.STRUCT, (short)1);
     private static final org.apache.thrift.protocol.TField TITLE_FIELD_DESC = new org.apache.thrift.protocol.TField("title", org.apache.thrift.protocol.TType.STRING, (short)2);
-    private static final org.apache.thrift.protocol.TField COUNT_FIELD_DESC = new org.apache.thrift.protocol.TField("count", org.apache.thrift.protocol.TType.I32, (short)3);
-    private static final org.apache.thrift.protocol.TField OFFSET_FIELD_DESC = new org.apache.thrift.protocol.TField("offset", org.apache.thrift.protocol.TType.I32, (short)4);
+    private static final org.apache.thrift.protocol.TField LIMIT_FIELD_DESC = new org.apache.thrift.protocol.TField("limit", org.apache.thrift.protocol.TType.I32, (short)3);
+    private static final org.apache.thrift.protocol.TField CURSOR_FIELD_DESC = new org.apache.thrift.protocol.TField("cursor", org.apache.thrift.protocol.TType.I64, (short)4);
     private static final org.apache.thrift.protocol.TField CODE_FIELD_DESC = new org.apache.thrift.protocol.TField("code", org.apache.thrift.protocol.TType.STRING, (short)5);
 
     private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new getVoucher_argsStandardSchemeFactory();
@@ -43876,16 +43912,16 @@ public class MiotoCarService {
 
     public @org.apache.thrift.annotation.Nullable thrift.OpHandle handle; // required
     public @org.apache.thrift.annotation.Nullable java.lang.String title; // required
-    public int count; // required
-    public int offset; // required
+    public int limit; // required
+    public long cursor; // required
     public @org.apache.thrift.annotation.Nullable java.lang.String code; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       HANDLE((short)1, "handle"),
       TITLE((short)2, "title"),
-      COUNT((short)3, "count"),
-      OFFSET((short)4, "offset"),
+      LIMIT((short)3, "limit"),
+      CURSOR((short)4, "cursor"),
       CODE((short)5, "code");
 
       private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
@@ -43906,10 +43942,10 @@ public class MiotoCarService {
             return HANDLE;
           case 2: // TITLE
             return TITLE;
-          case 3: // COUNT
-            return COUNT;
-          case 4: // OFFSET
-            return OFFSET;
+          case 3: // LIMIT
+            return LIMIT;
+          case 4: // CURSOR
+            return CURSOR;
           case 5: // CODE
             return CODE;
           default:
@@ -43953,8 +43989,8 @@ public class MiotoCarService {
     }
 
     // isset id assignments
-    private static final int __COUNT_ISSET_ID = 0;
-    private static final int __OFFSET_ISSET_ID = 1;
+    private static final int __LIMIT_ISSET_ID = 0;
+    private static final int __CURSOR_ISSET_ID = 1;
     private byte __isset_bitfield = 0;
     public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
@@ -43963,10 +43999,10 @@ public class MiotoCarService {
           new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, thrift.OpHandle.class)));
       tmpMap.put(_Fields.TITLE, new org.apache.thrift.meta_data.FieldMetaData("title", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-      tmpMap.put(_Fields.COUNT, new org.apache.thrift.meta_data.FieldMetaData("count", org.apache.thrift.TFieldRequirementType.REQUIRED, 
+      tmpMap.put(_Fields.LIMIT, new org.apache.thrift.meta_data.FieldMetaData("limit", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.OFFSET, new org.apache.thrift.meta_data.FieldMetaData("offset", org.apache.thrift.TFieldRequirementType.REQUIRED, 
-          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
+      tmpMap.put(_Fields.CURSOR, new org.apache.thrift.meta_data.FieldMetaData("cursor", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
       tmpMap.put(_Fields.CODE, new org.apache.thrift.meta_data.FieldMetaData("code", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
       metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
@@ -43979,17 +44015,17 @@ public class MiotoCarService {
     public getVoucher_args(
       thrift.OpHandle handle,
       java.lang.String title,
-      int count,
-      int offset,
+      int limit,
+      long cursor,
       java.lang.String code)
     {
       this();
       this.handle = handle;
       this.title = title;
-      this.count = count;
-      setCountIsSet(true);
-      this.offset = offset;
-      setOffsetIsSet(true);
+      this.limit = limit;
+      setLimitIsSet(true);
+      this.cursor = cursor;
+      setCursorIsSet(true);
       this.code = code;
     }
 
@@ -44004,8 +44040,8 @@ public class MiotoCarService {
       if (other.isSetTitle()) {
         this.title = other.title;
       }
-      this.count = other.count;
-      this.offset = other.offset;
+      this.limit = other.limit;
+      this.cursor = other.cursor;
       if (other.isSetCode()) {
         this.code = other.code;
       }
@@ -44019,10 +44055,10 @@ public class MiotoCarService {
     public void clear() {
       this.handle = null;
       this.title = null;
-      setCountIsSet(false);
-      this.count = 0;
-      setOffsetIsSet(false);
-      this.offset = 0;
+      setLimitIsSet(false);
+      this.limit = 0;
+      setCursorIsSet(false);
+      this.cursor = 0;
       this.code = null;
     }
 
@@ -44076,50 +44112,50 @@ public class MiotoCarService {
       }
     }
 
-    public int getCount() {
-      return this.count;
+    public int getLimit() {
+      return this.limit;
     }
 
-    public getVoucher_args setCount(int count) {
-      this.count = count;
-      setCountIsSet(true);
+    public getVoucher_args setLimit(int limit) {
+      this.limit = limit;
+      setLimitIsSet(true);
       return this;
     }
 
-    public void unsetCount() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNT_ISSET_ID);
+    public void unsetLimit() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    /** Returns true if field count is set (has been assigned a value) and false otherwise */
-    public boolean isSetCount() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNT_ISSET_ID);
+    /** Returns true if field limit is set (has been assigned a value) and false otherwise */
+    public boolean isSetLimit() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    public void setCountIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __COUNT_ISSET_ID, value);
+    public void setLimitIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __LIMIT_ISSET_ID, value);
     }
 
-    public int getOffset() {
-      return this.offset;
+    public long getCursor() {
+      return this.cursor;
     }
 
-    public getVoucher_args setOffset(int offset) {
-      this.offset = offset;
-      setOffsetIsSet(true);
+    public getVoucher_args setCursor(long cursor) {
+      this.cursor = cursor;
+      setCursorIsSet(true);
       return this;
     }
 
-    public void unsetOffset() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    public void unsetCursor() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    /** Returns true if field offset is set (has been assigned a value) and false otherwise */
-    public boolean isSetOffset() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    /** Returns true if field cursor is set (has been assigned a value) and false otherwise */
+    public boolean isSetCursor() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    public void setOffsetIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __OFFSET_ISSET_ID, value);
+    public void setCursorIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __CURSOR_ISSET_ID, value);
     }
 
     @org.apache.thrift.annotation.Nullable
@@ -44165,19 +44201,19 @@ public class MiotoCarService {
         }
         break;
 
-      case COUNT:
+      case LIMIT:
         if (value == null) {
-          unsetCount();
+          unsetLimit();
         } else {
-          setCount((java.lang.Integer)value);
+          setLimit((java.lang.Integer)value);
         }
         break;
 
-      case OFFSET:
+      case CURSOR:
         if (value == null) {
-          unsetOffset();
+          unsetCursor();
         } else {
-          setOffset((java.lang.Integer)value);
+          setCursor((java.lang.Long)value);
         }
         break;
 
@@ -44201,11 +44237,11 @@ public class MiotoCarService {
       case TITLE:
         return getTitle();
 
-      case COUNT:
-        return getCount();
+      case LIMIT:
+        return getLimit();
 
-      case OFFSET:
-        return getOffset();
+      case CURSOR:
+        return getCursor();
 
       case CODE:
         return getCode();
@@ -44225,10 +44261,10 @@ public class MiotoCarService {
         return isSetHandle();
       case TITLE:
         return isSetTitle();
-      case COUNT:
-        return isSetCount();
-      case OFFSET:
-        return isSetOffset();
+      case LIMIT:
+        return isSetLimit();
+      case CURSOR:
+        return isSetCursor();
       case CODE:
         return isSetCode();
       }
@@ -44268,21 +44304,21 @@ public class MiotoCarService {
           return false;
       }
 
-      boolean this_present_count = true;
-      boolean that_present_count = true;
-      if (this_present_count || that_present_count) {
-        if (!(this_present_count && that_present_count))
+      boolean this_present_limit = true;
+      boolean that_present_limit = true;
+      if (this_present_limit || that_present_limit) {
+        if (!(this_present_limit && that_present_limit))
           return false;
-        if (this.count != that.count)
+        if (this.limit != that.limit)
           return false;
       }
 
-      boolean this_present_offset = true;
-      boolean that_present_offset = true;
-      if (this_present_offset || that_present_offset) {
-        if (!(this_present_offset && that_present_offset))
+      boolean this_present_cursor = true;
+      boolean that_present_cursor = true;
+      if (this_present_cursor || that_present_cursor) {
+        if (!(this_present_cursor && that_present_cursor))
           return false;
-        if (this.offset != that.offset)
+        if (this.cursor != that.cursor)
           return false;
       }
 
@@ -44310,9 +44346,9 @@ public class MiotoCarService {
       if (isSetTitle())
         hashCode = hashCode * 8191 + title.hashCode();
 
-      hashCode = hashCode * 8191 + count;
+      hashCode = hashCode * 8191 + limit;
 
-      hashCode = hashCode * 8191 + offset;
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(cursor);
 
       hashCode = hashCode * 8191 + ((isSetCode()) ? 131071 : 524287);
       if (isSetCode())
@@ -44349,22 +44385,22 @@ public class MiotoCarService {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetCount()).compareTo(other.isSetCount());
+      lastComparison = java.lang.Boolean.valueOf(isSetLimit()).compareTo(other.isSetLimit());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetCount()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.count, other.count);
+      if (isSetLimit()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.limit, other.limit);
         if (lastComparison != 0) {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetOffset()).compareTo(other.isSetOffset());
+      lastComparison = java.lang.Boolean.valueOf(isSetCursor()).compareTo(other.isSetCursor());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetOffset()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.offset, other.offset);
+      if (isSetCursor()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.cursor, other.cursor);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -44416,12 +44452,12 @@ public class MiotoCarService {
       }
       first = false;
       if (!first) sb.append(", ");
-      sb.append("count:");
-      sb.append(this.count);
+      sb.append("limit:");
+      sb.append(this.limit);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("offset:");
-      sb.append(this.offset);
+      sb.append("cursor:");
+      sb.append(this.cursor);
       first = false;
       if (!first) sb.append(", ");
       sb.append("code:");
@@ -44440,8 +44476,6 @@ public class MiotoCarService {
       if (handle == null) {
         throw new org.apache.thrift.protocol.TProtocolException("Required field 'handle' was not present! Struct: " + toString());
       }
-      // alas, we cannot check 'count' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'offset' because it's a primitive and you chose the non-beans generator.
       // check for sub-struct validity
       if (handle != null) {
         handle.validate();
@@ -44501,18 +44535,18 @@ public class MiotoCarService {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 3: // COUNT
+            case 3: // LIMIT
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.count = iprot.readI32();
-                struct.setCountIsSet(true);
+                struct.limit = iprot.readI32();
+                struct.setLimitIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 4: // OFFSET
-              if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.offset = iprot.readI32();
-                struct.setOffsetIsSet(true);
+            case 4: // CURSOR
+              if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+                struct.cursor = iprot.readI64();
+                struct.setCursorIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -44533,12 +44567,6 @@ public class MiotoCarService {
         iprot.readStructEnd();
 
         // check for required fields of primitive type, which can't be checked in the validate method
-        if (!struct.isSetCount()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'count' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetOffset()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'offset' was not found in serialized data! Struct: " + toString());
-        }
         struct.validate();
       }
 
@@ -44556,11 +44584,11 @@ public class MiotoCarService {
           oprot.writeString(struct.title);
           oprot.writeFieldEnd();
         }
-        oprot.writeFieldBegin(COUNT_FIELD_DESC);
-        oprot.writeI32(struct.count);
+        oprot.writeFieldBegin(LIMIT_FIELD_DESC);
+        oprot.writeI32(struct.limit);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(OFFSET_FIELD_DESC);
-        oprot.writeI32(struct.offset);
+        oprot.writeFieldBegin(CURSOR_FIELD_DESC);
+        oprot.writeI64(struct.cursor);
         oprot.writeFieldEnd();
         if (struct.code != null) {
           oprot.writeFieldBegin(CODE_FIELD_DESC);
@@ -44585,18 +44613,28 @@ public class MiotoCarService {
       public void write(org.apache.thrift.protocol.TProtocol prot, getVoucher_args struct) throws org.apache.thrift.TException {
         org.apache.thrift.protocol.TTupleProtocol oprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
         struct.handle.write(oprot);
-        oprot.writeI32(struct.count);
-        oprot.writeI32(struct.offset);
         java.util.BitSet optionals = new java.util.BitSet();
         if (struct.isSetTitle()) {
           optionals.set(0);
         }
-        if (struct.isSetCode()) {
+        if (struct.isSetLimit()) {
           optionals.set(1);
         }
-        oprot.writeBitSet(optionals, 2);
+        if (struct.isSetCursor()) {
+          optionals.set(2);
+        }
+        if (struct.isSetCode()) {
+          optionals.set(3);
+        }
+        oprot.writeBitSet(optionals, 4);
         if (struct.isSetTitle()) {
           oprot.writeString(struct.title);
+        }
+        if (struct.isSetLimit()) {
+          oprot.writeI32(struct.limit);
+        }
+        if (struct.isSetCursor()) {
+          oprot.writeI64(struct.cursor);
         }
         if (struct.isSetCode()) {
           oprot.writeString(struct.code);
@@ -44609,16 +44647,20 @@ public class MiotoCarService {
         struct.handle = new thrift.OpHandle();
         struct.handle.read(iprot);
         struct.setHandleIsSet(true);
-        struct.count = iprot.readI32();
-        struct.setCountIsSet(true);
-        struct.offset = iprot.readI32();
-        struct.setOffsetIsSet(true);
-        java.util.BitSet incoming = iprot.readBitSet(2);
+        java.util.BitSet incoming = iprot.readBitSet(4);
         if (incoming.get(0)) {
           struct.title = iprot.readString();
           struct.setTitleIsSet(true);
         }
         if (incoming.get(1)) {
+          struct.limit = iprot.readI32();
+          struct.setLimitIsSet(true);
+        }
+        if (incoming.get(2)) {
+          struct.cursor = iprot.readI64();
+          struct.setCursorIsSet(true);
+        }
+        if (incoming.get(3)) {
           struct.code = iprot.readString();
           struct.setCodeIsSet(true);
         }
@@ -51301,23 +51343,23 @@ public class MiotoCarService {
 
     private static final org.apache.thrift.protocol.TField HANDLE_FIELD_DESC = new org.apache.thrift.protocol.TField("handle", org.apache.thrift.protocol.TType.STRUCT, (short)1);
     private static final org.apache.thrift.protocol.TField USER_ID_FIELD_DESC = new org.apache.thrift.protocol.TField("userId", org.apache.thrift.protocol.TType.I32, (short)2);
-    private static final org.apache.thrift.protocol.TField COUNT_FIELD_DESC = new org.apache.thrift.protocol.TField("count", org.apache.thrift.protocol.TType.I32, (short)3);
-    private static final org.apache.thrift.protocol.TField OFFSET_FIELD_DESC = new org.apache.thrift.protocol.TField("offset", org.apache.thrift.protocol.TType.I32, (short)4);
+    private static final org.apache.thrift.protocol.TField LIMIT_FIELD_DESC = new org.apache.thrift.protocol.TField("limit", org.apache.thrift.protocol.TType.I32, (short)3);
+    private static final org.apache.thrift.protocol.TField CURSOR_FIELD_DESC = new org.apache.thrift.protocol.TField("cursor", org.apache.thrift.protocol.TType.I64, (short)4);
 
     private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new getCarViewByUserId_argsStandardSchemeFactory();
     private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getCarViewByUserId_argsTupleSchemeFactory();
 
     public @org.apache.thrift.annotation.Nullable thrift.OpHandle handle; // required
     public int userId; // required
-    public int count; // required
-    public int offset; // required
+    public int limit; // required
+    public long cursor; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       HANDLE((short)1, "handle"),
       USER_ID((short)2, "userId"),
-      COUNT((short)3, "count"),
-      OFFSET((short)4, "offset");
+      LIMIT((short)3, "limit"),
+      CURSOR((short)4, "cursor");
 
       private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -51337,10 +51379,10 @@ public class MiotoCarService {
             return HANDLE;
           case 2: // USER_ID
             return USER_ID;
-          case 3: // COUNT
-            return COUNT;
-          case 4: // OFFSET
-            return OFFSET;
+          case 3: // LIMIT
+            return LIMIT;
+          case 4: // CURSOR
+            return CURSOR;
           default:
             return null;
         }
@@ -51383,8 +51425,8 @@ public class MiotoCarService {
 
     // isset id assignments
     private static final int __USERID_ISSET_ID = 0;
-    private static final int __COUNT_ISSET_ID = 1;
-    private static final int __OFFSET_ISSET_ID = 2;
+    private static final int __LIMIT_ISSET_ID = 1;
+    private static final int __CURSOR_ISSET_ID = 2;
     private byte __isset_bitfield = 0;
     public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
@@ -51393,10 +51435,10 @@ public class MiotoCarService {
           new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, thrift.OpHandle.class)));
       tmpMap.put(_Fields.USER_ID, new org.apache.thrift.meta_data.FieldMetaData("userId", org.apache.thrift.TFieldRequirementType.REQUIRED, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.COUNT, new org.apache.thrift.meta_data.FieldMetaData("count", org.apache.thrift.TFieldRequirementType.REQUIRED, 
+      tmpMap.put(_Fields.LIMIT, new org.apache.thrift.meta_data.FieldMetaData("limit", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.OFFSET, new org.apache.thrift.meta_data.FieldMetaData("offset", org.apache.thrift.TFieldRequirementType.REQUIRED, 
-          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
+      tmpMap.put(_Fields.CURSOR, new org.apache.thrift.meta_data.FieldMetaData("cursor", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
       metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
       org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getCarViewByUserId_args.class, metaDataMap);
     }
@@ -51407,17 +51449,17 @@ public class MiotoCarService {
     public getCarViewByUserId_args(
       thrift.OpHandle handle,
       int userId,
-      int count,
-      int offset)
+      int limit,
+      long cursor)
     {
       this();
       this.handle = handle;
       this.userId = userId;
       setUserIdIsSet(true);
-      this.count = count;
-      setCountIsSet(true);
-      this.offset = offset;
-      setOffsetIsSet(true);
+      this.limit = limit;
+      setLimitIsSet(true);
+      this.cursor = cursor;
+      setCursorIsSet(true);
     }
 
     /**
@@ -51429,8 +51471,8 @@ public class MiotoCarService {
         this.handle = new thrift.OpHandle(other.handle);
       }
       this.userId = other.userId;
-      this.count = other.count;
-      this.offset = other.offset;
+      this.limit = other.limit;
+      this.cursor = other.cursor;
     }
 
     public getCarViewByUserId_args deepCopy() {
@@ -51442,10 +51484,10 @@ public class MiotoCarService {
       this.handle = null;
       setUserIdIsSet(false);
       this.userId = 0;
-      setCountIsSet(false);
-      this.count = 0;
-      setOffsetIsSet(false);
-      this.offset = 0;
+      setLimitIsSet(false);
+      this.limit = 0;
+      setCursorIsSet(false);
+      this.cursor = 0;
     }
 
     @org.apache.thrift.annotation.Nullable
@@ -51496,50 +51538,50 @@ public class MiotoCarService {
       __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __USERID_ISSET_ID, value);
     }
 
-    public int getCount() {
-      return this.count;
+    public int getLimit() {
+      return this.limit;
     }
 
-    public getCarViewByUserId_args setCount(int count) {
-      this.count = count;
-      setCountIsSet(true);
+    public getCarViewByUserId_args setLimit(int limit) {
+      this.limit = limit;
+      setLimitIsSet(true);
       return this;
     }
 
-    public void unsetCount() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNT_ISSET_ID);
+    public void unsetLimit() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    /** Returns true if field count is set (has been assigned a value) and false otherwise */
-    public boolean isSetCount() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNT_ISSET_ID);
+    /** Returns true if field limit is set (has been assigned a value) and false otherwise */
+    public boolean isSetLimit() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    public void setCountIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __COUNT_ISSET_ID, value);
+    public void setLimitIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __LIMIT_ISSET_ID, value);
     }
 
-    public int getOffset() {
-      return this.offset;
+    public long getCursor() {
+      return this.cursor;
     }
 
-    public getCarViewByUserId_args setOffset(int offset) {
-      this.offset = offset;
-      setOffsetIsSet(true);
+    public getCarViewByUserId_args setCursor(long cursor) {
+      this.cursor = cursor;
+      setCursorIsSet(true);
       return this;
     }
 
-    public void unsetOffset() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    public void unsetCursor() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    /** Returns true if field offset is set (has been assigned a value) and false otherwise */
-    public boolean isSetOffset() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    /** Returns true if field cursor is set (has been assigned a value) and false otherwise */
+    public boolean isSetCursor() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    public void setOffsetIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __OFFSET_ISSET_ID, value);
+    public void setCursorIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __CURSOR_ISSET_ID, value);
     }
 
     public void setFieldValue(_Fields field, @org.apache.thrift.annotation.Nullable java.lang.Object value) {
@@ -51560,19 +51602,19 @@ public class MiotoCarService {
         }
         break;
 
-      case COUNT:
+      case LIMIT:
         if (value == null) {
-          unsetCount();
+          unsetLimit();
         } else {
-          setCount((java.lang.Integer)value);
+          setLimit((java.lang.Integer)value);
         }
         break;
 
-      case OFFSET:
+      case CURSOR:
         if (value == null) {
-          unsetOffset();
+          unsetCursor();
         } else {
-          setOffset((java.lang.Integer)value);
+          setCursor((java.lang.Long)value);
         }
         break;
 
@@ -51588,11 +51630,11 @@ public class MiotoCarService {
       case USER_ID:
         return getUserId();
 
-      case COUNT:
-        return getCount();
+      case LIMIT:
+        return getLimit();
 
-      case OFFSET:
-        return getOffset();
+      case CURSOR:
+        return getCursor();
 
       }
       throw new java.lang.IllegalStateException();
@@ -51609,10 +51651,10 @@ public class MiotoCarService {
         return isSetHandle();
       case USER_ID:
         return isSetUserId();
-      case COUNT:
-        return isSetCount();
-      case OFFSET:
-        return isSetOffset();
+      case LIMIT:
+        return isSetLimit();
+      case CURSOR:
+        return isSetCursor();
       }
       throw new java.lang.IllegalStateException();
     }
@@ -51650,21 +51692,21 @@ public class MiotoCarService {
           return false;
       }
 
-      boolean this_present_count = true;
-      boolean that_present_count = true;
-      if (this_present_count || that_present_count) {
-        if (!(this_present_count && that_present_count))
+      boolean this_present_limit = true;
+      boolean that_present_limit = true;
+      if (this_present_limit || that_present_limit) {
+        if (!(this_present_limit && that_present_limit))
           return false;
-        if (this.count != that.count)
+        if (this.limit != that.limit)
           return false;
       }
 
-      boolean this_present_offset = true;
-      boolean that_present_offset = true;
-      if (this_present_offset || that_present_offset) {
-        if (!(this_present_offset && that_present_offset))
+      boolean this_present_cursor = true;
+      boolean that_present_cursor = true;
+      if (this_present_cursor || that_present_cursor) {
+        if (!(this_present_cursor && that_present_cursor))
           return false;
-        if (this.offset != that.offset)
+        if (this.cursor != that.cursor)
           return false;
       }
 
@@ -51681,9 +51723,9 @@ public class MiotoCarService {
 
       hashCode = hashCode * 8191 + userId;
 
-      hashCode = hashCode * 8191 + count;
+      hashCode = hashCode * 8191 + limit;
 
-      hashCode = hashCode * 8191 + offset;
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(cursor);
 
       return hashCode;
     }
@@ -51716,22 +51758,22 @@ public class MiotoCarService {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetCount()).compareTo(other.isSetCount());
+      lastComparison = java.lang.Boolean.valueOf(isSetLimit()).compareTo(other.isSetLimit());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetCount()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.count, other.count);
+      if (isSetLimit()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.limit, other.limit);
         if (lastComparison != 0) {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetOffset()).compareTo(other.isSetOffset());
+      lastComparison = java.lang.Boolean.valueOf(isSetCursor()).compareTo(other.isSetCursor());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetOffset()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.offset, other.offset);
+      if (isSetCursor()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.cursor, other.cursor);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -51769,12 +51811,12 @@ public class MiotoCarService {
       sb.append(this.userId);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("count:");
-      sb.append(this.count);
+      sb.append("limit:");
+      sb.append(this.limit);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("offset:");
-      sb.append(this.offset);
+      sb.append("cursor:");
+      sb.append(this.cursor);
       first = false;
       sb.append(")");
       return sb.toString();
@@ -51786,8 +51828,6 @@ public class MiotoCarService {
         throw new org.apache.thrift.protocol.TProtocolException("Required field 'handle' was not present! Struct: " + toString());
       }
       // alas, we cannot check 'userId' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'count' because it's a primitive and you chose the non-beans generator.
-      // alas, we cannot check 'offset' because it's a primitive and you chose the non-beans generator.
       // check for sub-struct validity
       if (handle != null) {
         handle.validate();
@@ -51847,18 +51887,18 @@ public class MiotoCarService {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 3: // COUNT
+            case 3: // LIMIT
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.count = iprot.readI32();
-                struct.setCountIsSet(true);
+                struct.limit = iprot.readI32();
+                struct.setLimitIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 4: // OFFSET
-              if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.offset = iprot.readI32();
-                struct.setOffsetIsSet(true);
+            case 4: // CURSOR
+              if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+                struct.cursor = iprot.readI64();
+                struct.setCursorIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -51873,12 +51913,6 @@ public class MiotoCarService {
         // check for required fields of primitive type, which can't be checked in the validate method
         if (!struct.isSetUserId()) {
           throw new org.apache.thrift.protocol.TProtocolException("Required field 'userId' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetCount()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'count' was not found in serialized data! Struct: " + toString());
-        }
-        if (!struct.isSetOffset()) {
-          throw new org.apache.thrift.protocol.TProtocolException("Required field 'offset' was not found in serialized data! Struct: " + toString());
         }
         struct.validate();
       }
@@ -51895,11 +51929,11 @@ public class MiotoCarService {
         oprot.writeFieldBegin(USER_ID_FIELD_DESC);
         oprot.writeI32(struct.userId);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(COUNT_FIELD_DESC);
-        oprot.writeI32(struct.count);
+        oprot.writeFieldBegin(LIMIT_FIELD_DESC);
+        oprot.writeI32(struct.limit);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(OFFSET_FIELD_DESC);
-        oprot.writeI32(struct.offset);
+        oprot.writeFieldBegin(CURSOR_FIELD_DESC);
+        oprot.writeI64(struct.cursor);
         oprot.writeFieldEnd();
         oprot.writeFieldStop();
         oprot.writeStructEnd();
@@ -51920,8 +51954,20 @@ public class MiotoCarService {
         org.apache.thrift.protocol.TTupleProtocol oprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
         struct.handle.write(oprot);
         oprot.writeI32(struct.userId);
-        oprot.writeI32(struct.count);
-        oprot.writeI32(struct.offset);
+        java.util.BitSet optionals = new java.util.BitSet();
+        if (struct.isSetLimit()) {
+          optionals.set(0);
+        }
+        if (struct.isSetCursor()) {
+          optionals.set(1);
+        }
+        oprot.writeBitSet(optionals, 2);
+        if (struct.isSetLimit()) {
+          oprot.writeI32(struct.limit);
+        }
+        if (struct.isSetCursor()) {
+          oprot.writeI64(struct.cursor);
+        }
       }
 
       @Override
@@ -51932,10 +51978,15 @@ public class MiotoCarService {
         struct.setHandleIsSet(true);
         struct.userId = iprot.readI32();
         struct.setUserIdIsSet(true);
-        struct.count = iprot.readI32();
-        struct.setCountIsSet(true);
-        struct.offset = iprot.readI32();
-        struct.setOffsetIsSet(true);
+        java.util.BitSet incoming = iprot.readBitSet(2);
+        if (incoming.get(0)) {
+          struct.limit = iprot.readI32();
+          struct.setLimitIsSet(true);
+        }
+        if (incoming.get(1)) {
+          struct.cursor = iprot.readI64();
+          struct.setCursorIsSet(true);
+        }
       }
     }
 
@@ -65804,23 +65855,23 @@ public class MiotoCarService {
 
     private static final org.apache.thrift.protocol.TField HANDLE_FIELD_DESC = new org.apache.thrift.protocol.TField("handle", org.apache.thrift.protocol.TType.STRUCT, (short)1);
     private static final org.apache.thrift.protocol.TField NAME_FIELD_DESC = new org.apache.thrift.protocol.TField("name", org.apache.thrift.protocol.TType.STRING, (short)2);
-    private static final org.apache.thrift.protocol.TField COUNT_FIELD_DESC = new org.apache.thrift.protocol.TField("count", org.apache.thrift.protocol.TType.I32, (short)3);
-    private static final org.apache.thrift.protocol.TField OFFSET_FIELD_DESC = new org.apache.thrift.protocol.TField("offset", org.apache.thrift.protocol.TType.I32, (short)4);
+    private static final org.apache.thrift.protocol.TField LIMIT_FIELD_DESC = new org.apache.thrift.protocol.TField("limit", org.apache.thrift.protocol.TType.I32, (short)3);
+    private static final org.apache.thrift.protocol.TField CURSOR_FIELD_DESC = new org.apache.thrift.protocol.TField("cursor", org.apache.thrift.protocol.TType.I64, (short)4);
 
     private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new getRole_argsStandardSchemeFactory();
     private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getRole_argsTupleSchemeFactory();
 
     public @org.apache.thrift.annotation.Nullable thrift.OpHandle handle; // required
     public @org.apache.thrift.annotation.Nullable java.lang.String name; // required
-    public int count; // required
-    public int offset; // required
+    public int limit; // required
+    public long cursor; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
       HANDLE((short)1, "handle"),
       NAME((short)2, "name"),
-      COUNT((short)3, "count"),
-      OFFSET((short)4, "offset");
+      LIMIT((short)3, "limit"),
+      CURSOR((short)4, "cursor");
 
       private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -65840,10 +65891,10 @@ public class MiotoCarService {
             return HANDLE;
           case 2: // NAME
             return NAME;
-          case 3: // COUNT
-            return COUNT;
-          case 4: // OFFSET
-            return OFFSET;
+          case 3: // LIMIT
+            return LIMIT;
+          case 4: // CURSOR
+            return CURSOR;
           default:
             return null;
         }
@@ -65885,8 +65936,8 @@ public class MiotoCarService {
     }
 
     // isset id assignments
-    private static final int __COUNT_ISSET_ID = 0;
-    private static final int __OFFSET_ISSET_ID = 1;
+    private static final int __LIMIT_ISSET_ID = 0;
+    private static final int __CURSOR_ISSET_ID = 1;
     private byte __isset_bitfield = 0;
     public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
@@ -65895,10 +65946,10 @@ public class MiotoCarService {
           new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, thrift.OpHandle.class)));
       tmpMap.put(_Fields.NAME, new org.apache.thrift.meta_data.FieldMetaData("name", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-      tmpMap.put(_Fields.COUNT, new org.apache.thrift.meta_data.FieldMetaData("count", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+      tmpMap.put(_Fields.LIMIT, new org.apache.thrift.meta_data.FieldMetaData("limit", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-      tmpMap.put(_Fields.OFFSET, new org.apache.thrift.meta_data.FieldMetaData("offset", org.apache.thrift.TFieldRequirementType.DEFAULT, 
-          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
+      tmpMap.put(_Fields.CURSOR, new org.apache.thrift.meta_data.FieldMetaData("cursor", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+          new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
       metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
       org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getRole_args.class, metaDataMap);
     }
@@ -65909,16 +65960,16 @@ public class MiotoCarService {
     public getRole_args(
       thrift.OpHandle handle,
       java.lang.String name,
-      int count,
-      int offset)
+      int limit,
+      long cursor)
     {
       this();
       this.handle = handle;
       this.name = name;
-      this.count = count;
-      setCountIsSet(true);
-      this.offset = offset;
-      setOffsetIsSet(true);
+      this.limit = limit;
+      setLimitIsSet(true);
+      this.cursor = cursor;
+      setCursorIsSet(true);
     }
 
     /**
@@ -65932,8 +65983,8 @@ public class MiotoCarService {
       if (other.isSetName()) {
         this.name = other.name;
       }
-      this.count = other.count;
-      this.offset = other.offset;
+      this.limit = other.limit;
+      this.cursor = other.cursor;
     }
 
     public getRole_args deepCopy() {
@@ -65944,10 +65995,10 @@ public class MiotoCarService {
     public void clear() {
       this.handle = null;
       this.name = null;
-      setCountIsSet(false);
-      this.count = 0;
-      setOffsetIsSet(false);
-      this.offset = 0;
+      setLimitIsSet(false);
+      this.limit = 0;
+      setCursorIsSet(false);
+      this.cursor = 0;
     }
 
     @org.apache.thrift.annotation.Nullable
@@ -66000,50 +66051,50 @@ public class MiotoCarService {
       }
     }
 
-    public int getCount() {
-      return this.count;
+    public int getLimit() {
+      return this.limit;
     }
 
-    public getRole_args setCount(int count) {
-      this.count = count;
-      setCountIsSet(true);
+    public getRole_args setLimit(int limit) {
+      this.limit = limit;
+      setLimitIsSet(true);
       return this;
     }
 
-    public void unsetCount() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNT_ISSET_ID);
+    public void unsetLimit() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    /** Returns true if field count is set (has been assigned a value) and false otherwise */
-    public boolean isSetCount() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNT_ISSET_ID);
+    /** Returns true if field limit is set (has been assigned a value) and false otherwise */
+    public boolean isSetLimit() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LIMIT_ISSET_ID);
     }
 
-    public void setCountIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __COUNT_ISSET_ID, value);
+    public void setLimitIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __LIMIT_ISSET_ID, value);
     }
 
-    public int getOffset() {
-      return this.offset;
+    public long getCursor() {
+      return this.cursor;
     }
 
-    public getRole_args setOffset(int offset) {
-      this.offset = offset;
-      setOffsetIsSet(true);
+    public getRole_args setCursor(long cursor) {
+      this.cursor = cursor;
+      setCursorIsSet(true);
       return this;
     }
 
-    public void unsetOffset() {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    public void unsetCursor() {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    /** Returns true if field offset is set (has been assigned a value) and false otherwise */
-    public boolean isSetOffset() {
-      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __OFFSET_ISSET_ID);
+    /** Returns true if field cursor is set (has been assigned a value) and false otherwise */
+    public boolean isSetCursor() {
+      return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CURSOR_ISSET_ID);
     }
 
-    public void setOffsetIsSet(boolean value) {
-      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __OFFSET_ISSET_ID, value);
+    public void setCursorIsSet(boolean value) {
+      __isset_bitfield = org.apache.thrift.EncodingUtils.setBit(__isset_bitfield, __CURSOR_ISSET_ID, value);
     }
 
     public void setFieldValue(_Fields field, @org.apache.thrift.annotation.Nullable java.lang.Object value) {
@@ -66064,19 +66115,19 @@ public class MiotoCarService {
         }
         break;
 
-      case COUNT:
+      case LIMIT:
         if (value == null) {
-          unsetCount();
+          unsetLimit();
         } else {
-          setCount((java.lang.Integer)value);
+          setLimit((java.lang.Integer)value);
         }
         break;
 
-      case OFFSET:
+      case CURSOR:
         if (value == null) {
-          unsetOffset();
+          unsetCursor();
         } else {
-          setOffset((java.lang.Integer)value);
+          setCursor((java.lang.Long)value);
         }
         break;
 
@@ -66092,11 +66143,11 @@ public class MiotoCarService {
       case NAME:
         return getName();
 
-      case COUNT:
-        return getCount();
+      case LIMIT:
+        return getLimit();
 
-      case OFFSET:
-        return getOffset();
+      case CURSOR:
+        return getCursor();
 
       }
       throw new java.lang.IllegalStateException();
@@ -66113,10 +66164,10 @@ public class MiotoCarService {
         return isSetHandle();
       case NAME:
         return isSetName();
-      case COUNT:
-        return isSetCount();
-      case OFFSET:
-        return isSetOffset();
+      case LIMIT:
+        return isSetLimit();
+      case CURSOR:
+        return isSetCursor();
       }
       throw new java.lang.IllegalStateException();
     }
@@ -66154,21 +66205,21 @@ public class MiotoCarService {
           return false;
       }
 
-      boolean this_present_count = true;
-      boolean that_present_count = true;
-      if (this_present_count || that_present_count) {
-        if (!(this_present_count && that_present_count))
+      boolean this_present_limit = true;
+      boolean that_present_limit = true;
+      if (this_present_limit || that_present_limit) {
+        if (!(this_present_limit && that_present_limit))
           return false;
-        if (this.count != that.count)
+        if (this.limit != that.limit)
           return false;
       }
 
-      boolean this_present_offset = true;
-      boolean that_present_offset = true;
-      if (this_present_offset || that_present_offset) {
-        if (!(this_present_offset && that_present_offset))
+      boolean this_present_cursor = true;
+      boolean that_present_cursor = true;
+      if (this_present_cursor || that_present_cursor) {
+        if (!(this_present_cursor && that_present_cursor))
           return false;
-        if (this.offset != that.offset)
+        if (this.cursor != that.cursor)
           return false;
       }
 
@@ -66187,9 +66238,9 @@ public class MiotoCarService {
       if (isSetName())
         hashCode = hashCode * 8191 + name.hashCode();
 
-      hashCode = hashCode * 8191 + count;
+      hashCode = hashCode * 8191 + limit;
 
-      hashCode = hashCode * 8191 + offset;
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(cursor);
 
       return hashCode;
     }
@@ -66222,22 +66273,22 @@ public class MiotoCarService {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetCount()).compareTo(other.isSetCount());
+      lastComparison = java.lang.Boolean.valueOf(isSetLimit()).compareTo(other.isSetLimit());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetCount()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.count, other.count);
+      if (isSetLimit()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.limit, other.limit);
         if (lastComparison != 0) {
           return lastComparison;
         }
       }
-      lastComparison = java.lang.Boolean.valueOf(isSetOffset()).compareTo(other.isSetOffset());
+      lastComparison = java.lang.Boolean.valueOf(isSetCursor()).compareTo(other.isSetCursor());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetOffset()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.offset, other.offset);
+      if (isSetCursor()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.cursor, other.cursor);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -66279,12 +66330,12 @@ public class MiotoCarService {
       }
       first = false;
       if (!first) sb.append(", ");
-      sb.append("count:");
-      sb.append(this.count);
+      sb.append("limit:");
+      sb.append(this.limit);
       first = false;
       if (!first) sb.append(", ");
-      sb.append("offset:");
-      sb.append(this.offset);
+      sb.append("cursor:");
+      sb.append(this.cursor);
       first = false;
       sb.append(")");
       return sb.toString();
@@ -66354,18 +66405,18 @@ public class MiotoCarService {
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 3: // COUNT
+            case 3: // LIMIT
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.count = iprot.readI32();
-                struct.setCountIsSet(true);
+                struct.limit = iprot.readI32();
+                struct.setLimitIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
               break;
-            case 4: // OFFSET
-              if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.offset = iprot.readI32();
-                struct.setOffsetIsSet(true);
+            case 4: // CURSOR
+              if (schemeField.type == org.apache.thrift.protocol.TType.I64) {
+                struct.cursor = iprot.readI64();
+                struct.setCursorIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -66395,11 +66446,11 @@ public class MiotoCarService {
           oprot.writeString(struct.name);
           oprot.writeFieldEnd();
         }
-        oprot.writeFieldBegin(COUNT_FIELD_DESC);
-        oprot.writeI32(struct.count);
+        oprot.writeFieldBegin(LIMIT_FIELD_DESC);
+        oprot.writeI32(struct.limit);
         oprot.writeFieldEnd();
-        oprot.writeFieldBegin(OFFSET_FIELD_DESC);
-        oprot.writeI32(struct.offset);
+        oprot.writeFieldBegin(CURSOR_FIELD_DESC);
+        oprot.writeI64(struct.cursor);
         oprot.writeFieldEnd();
         oprot.writeFieldStop();
         oprot.writeStructEnd();
@@ -66423,21 +66474,21 @@ public class MiotoCarService {
         if (struct.isSetName()) {
           optionals.set(0);
         }
-        if (struct.isSetCount()) {
+        if (struct.isSetLimit()) {
           optionals.set(1);
         }
-        if (struct.isSetOffset()) {
+        if (struct.isSetCursor()) {
           optionals.set(2);
         }
         oprot.writeBitSet(optionals, 3);
         if (struct.isSetName()) {
           oprot.writeString(struct.name);
         }
-        if (struct.isSetCount()) {
-          oprot.writeI32(struct.count);
+        if (struct.isSetLimit()) {
+          oprot.writeI32(struct.limit);
         }
-        if (struct.isSetOffset()) {
-          oprot.writeI32(struct.offset);
+        if (struct.isSetCursor()) {
+          oprot.writeI64(struct.cursor);
         }
       }
 
@@ -66453,12 +66504,12 @@ public class MiotoCarService {
           struct.setNameIsSet(true);
         }
         if (incoming.get(1)) {
-          struct.count = iprot.readI32();
-          struct.setCountIsSet(true);
+          struct.limit = iprot.readI32();
+          struct.setLimitIsSet(true);
         }
         if (incoming.get(2)) {
-          struct.offset = iprot.readI32();
-          struct.setOffsetIsSet(true);
+          struct.cursor = iprot.readI64();
+          struct.setCursorIsSet(true);
         }
       }
     }

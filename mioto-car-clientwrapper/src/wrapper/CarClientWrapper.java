@@ -161,12 +161,12 @@ public class CarClientWrapper {
         }, new TUserResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
     
-    public TListUserResult getAllUser(final int status, final int count, final int offset)
+    public TListUserResult getAllUser(final int status, final int limit, final long cursor)
     {
         return execute(new Call<TListUserResult>(){
             @Override
             public TListUserResult exec(MiotoCarService.Client client) throws Exception {
-                return (TListUserResult) client.getAllUser(_handle, status, count, offset);
+                return (TListUserResult) client.getAllUser(_handle, status, limit, cursor);
             }
 
         }, new TListUserResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
@@ -213,11 +213,11 @@ public class CarClientWrapper {
         }, new TFeePolicyResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
-    public TListFeePolicyResult getFeePolicy(final String name, final int count, final int offset) {
+    public TListFeePolicyResult getFeePolicy(final String name, final int limit, final long cursor) {
         return execute(new Call<TListFeePolicyResult>() {
             @Override
             public TListFeePolicyResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getFeePolicy(_handle, name, count, offset);
+                return client.getFeePolicy(_handle, name, limit, cursor);
             }
 
         }, new TListFeePolicyResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
@@ -264,11 +264,11 @@ public class CarClientWrapper {
         }, new TProvinceResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
-    public TListProvinceResult getProvince(final String provinceName, final int count, final int offset) {
+    public TListProvinceResult getProvince(final String provinceName, final int limit, final long cursor) {
         return execute(new Call<TListProvinceResult>() {
             @Override
             public TListProvinceResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getProvince(_handle, provinceName, count, offset);
+                return client.getProvince(_handle, provinceName, limit, cursor);
             }
 
         }, new TListProvinceResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
@@ -315,11 +315,11 @@ public class CarClientWrapper {
         }, new TDistrictResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
-    public TListDistrictResult getDistrict(final int provinceId, final int count, final int offset) {
+    public TListDistrictResult getDistrict(final int provinceId, final int limit, final long cursor) {
         return execute(new Call<TListDistrictResult>() {
             @Override
             public TListDistrictResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getDistrict(_handle, provinceId, count, offset);
+                return client.getDistrict(_handle, provinceId, limit, cursor);
             }
 
         }, new TListDistrictResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
@@ -407,11 +407,11 @@ public class CarClientWrapper {
         }, new TFeatureResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
-    public TListFeatureResult getFeature(final String nameFeature, final int count, final int offset) {
+    public TListFeatureResult getFeature(final String nameFeature, final int limit, final long cursor) {
         return execute(new Call<TListFeatureResult>() {
             @Override
             public TListFeatureResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getFeature(_handle, nameFeature, count, offset);
+                return client.getFeature(_handle, nameFeature, limit, cursor);
             }
 
         }, new TListFeatureResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
@@ -458,11 +458,11 @@ public class CarClientWrapper {
         }, new TFeedBackResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
-    public TListFeedBackResult getFeedBack(final int receiverId, final int count, final int offset) {
+    public TListFeedBackResult getFeedBack(final int receiverId, final int limit, final long cursor) {
         return execute(new Call<TListFeedBackResult>() {
             @Override
             public TListFeedBackResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getFeedBack(_handle, receiverId, count, offset);
+                return client.getFeedBack(_handle, receiverId, limit, cursor);
             }
 
         }, new TListFeedBackResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
@@ -499,11 +499,11 @@ public class CarClientWrapper {
         }, new TVoucherResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
-    public TListVoucherResult getVoucher(final String title, final int count, final int offset, final String code) {
+    public TListVoucherResult getVoucher(final String title, final int limit, final long cursor, final String code) {
         return execute(new Call<TListVoucherResult>() {
             @Override
             public TListVoucherResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getVoucher(_handle, title, count, offset, code);
+                return client.getVoucher(_handle, title, limit, cursor, code);
             }
 
         }, new TListVoucherResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
@@ -569,11 +569,11 @@ public class CarClientWrapper {
         }, new TCarDetailResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
-    public TListCarViewResult getCarViewByUserId(final int userId, final int count, final int offset) {
+    public TListCarViewResult getCarViewByUserId(final int userId, final int limit, final long cursor) {
         return execute(new Call<TListCarViewResult>() {
             @Override
             public TListCarViewResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getCarViewByUserId(_handle, userId, count, offset);
+                return client.getCarViewByUserId(_handle, userId, limit, cursor);
             }
 
         }, new TListCarViewResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
@@ -736,11 +736,11 @@ public class CarClientWrapper {
         }, new TRoleResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
-    public TListRoleResult getRole(final String name, final int count, final int offset) {
+    public TListRoleResult getRole(final String name, final int limit, final long cursor) {
         return execute(new Call<TListRoleResult>() {
             @Override
             public TListRoleResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getRole(_handle, name, count, offset);
+                return client.getRole(_handle, name, limit, cursor);
             }
         }, new TListRoleResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
