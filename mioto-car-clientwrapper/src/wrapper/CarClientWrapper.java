@@ -356,11 +356,11 @@ public class CarClientWrapper {
         }, new TCarBrandResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
     }
 
-    public TListCarBrandResult getCarBrand(final String nameBrand, final int count, final int offset) {
+    public TListCarBrandResult getCarBrand(final String nameBrand, final int limit, final long cursor) {
         return execute(new Call<TListCarBrandResult>() {
             @Override
             public TListCarBrandResult exec(MiotoCarService.Client client) throws Exception {
-                return client.getCarBrand(_handle, nameBrand, count, offset);
+                return client.getCarBrand(_handle, nameBrand, limit, cursor);
             }
 
         }, new TListCarBrandResult(Err.NO_CONNECTION, "Lỗi kết nối mạng"));
